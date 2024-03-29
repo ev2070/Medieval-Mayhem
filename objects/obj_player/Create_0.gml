@@ -1,5 +1,11 @@
 // obj_player create
 
+fallen = false;
+can_move = true;
+fall_timer = 0;
+fall_timer_max = 60;
+start_x = x
+start_y = y
 // speed
 spd = 3.25;
 
