@@ -18,6 +18,9 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_danger_zone","order":4,"path":"objects/obj_danger_zone/obj_danger_zone.yy",},
+    {"name":"obj_hp_bar","order":7,"path":"objects/obj_hp_bar/obj_hp_bar.yy",},
+    {"name":"obj_hp_bar1","order":6,"path":"objects/obj_hp_bar1/obj_hp_bar1.yy",},
+    {"name":"obj_hp_bar2","order":8,"path":"objects/obj_hp_bar2/obj_hp_bar2.yy",},
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_player1","order":3,"path":"objects/obj_player1/obj_player1.yy",},
     {"name":"obj_player2","order":1,"path":"objects/obj_player2/obj_player2.yy",},

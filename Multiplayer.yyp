@@ -35,6 +35,9 @@
   "name":"Multiplayer",
   "resources":[
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},},
+    {"id":{"name":"obj_hp_bar","path":"objects/obj_hp_bar/obj_hp_bar.yy",},},
+    {"id":{"name":"obj_hp_bar1","path":"objects/obj_hp_bar1/obj_hp_bar1.yy",},},
+    {"id":{"name":"obj_hp_bar2","path":"objects/obj_hp_bar2/obj_hp_bar2.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},},
     {"id":{"name":"obj_player2","path":"objects/obj_player2/obj_player2.yy",},},
