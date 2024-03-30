@@ -18,13 +18,17 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_danger_zone","order":4,"path":"objects/obj_danger_zone/obj_danger_zone.yy",},
+    {"name":"obj_hitbox_1","order":10,"path":"objects/obj_hitbox_1/obj_hitbox_1.yy",},
     {"name":"obj_hp_bar","order":7,"path":"objects/obj_hp_bar/obj_hp_bar.yy",},
     {"name":"obj_hp_bar1","order":6,"path":"objects/obj_hp_bar1/obj_hp_bar1.yy",},
     {"name":"obj_hp_bar2","order":8,"path":"objects/obj_hp_bar2/obj_hp_bar2.yy",},
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_player1","order":3,"path":"objects/obj_player1/obj_player1.yy",},
     {"name":"obj_player2","order":1,"path":"objects/obj_player2/obj_player2.yy",},
+    {"name":"Object8","order":9,"path":"objects/Object8/Object8.yy",},
+    {"name":"spr_hitbox","order":2,"path":"sprites/spr_hitbox/spr_hitbox.yy",},
     {"name":"spr_player1","order":1,"path":"sprites/spr_player1/spr_player1.yy",},
     {"name":"Sprite3","order":5,"path":"sprites/Sprite3/Sprite3.yy",},
+    {"name":"spr_hurtbox","order":3,"path":"sprites/spr_hurtbox/spr_hurtbox.yy",},
   ],
 }

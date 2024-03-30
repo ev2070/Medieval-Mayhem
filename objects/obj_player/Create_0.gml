@@ -20,6 +20,7 @@ move_up = false
 move_down = false
 move_left = false
 move_right = false
+move_dir = 0; //movement angle
 
 // for combat
 slap = false;

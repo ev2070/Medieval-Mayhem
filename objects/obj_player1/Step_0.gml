@@ -8,6 +8,34 @@ if (keyboard_check(ord("A"))) { move_left  = true; }
 if (keyboard_check(ord("S"))) { move_down  = true; }
 if (keyboard_check(ord("D"))) { move_right = true; }
 
+//change move angle
+if move_up {
+	move_dir = 90
+	if move_left {
+		move_dir += 45
+	}
+	else if move_right {
+		move_dir -= 45
+	}
+}
+else if move_down {
+	move_dir = 270
+	if move_left {
+		move_dir -= 45
+	}
+	else if move_right {
+		move_dir += 45
+	}
+}
+else {
+	if move_left {
+		move_dir = 180
+	}
+	else if move_right {
+		move_dir = 0
+	}
+}
+
 // Check for player 1's combat move
 if (!hit) {
 	if (keyboard_check(vk_shift)) { slap = true; }
@@ -40,6 +68,7 @@ if keyboard_check_pressed(ord("G")){
 if keyboard_check_direct(ord("G")){
 	charge+=1;
 }
-if keyboard_check_released(ord("G")) and charge == 10{
+if keyboard_check_released(ord("G")) and charge == 10 {
 	//hit function
+}
 }
