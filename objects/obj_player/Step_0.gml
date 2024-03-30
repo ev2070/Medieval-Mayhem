@@ -62,6 +62,35 @@ if (defend) {
 	}
 }
 
+//change move angle
+if move_up {
+	move_dir = 90
+	if move_left {
+		move_dir += 45
+	}
+	else if move_right {
+		move_dir -= 45
+	}
+}
+else if move_down {
+	move_dir = 270
+	if move_left {
+		move_dir -= 45
+	}
+	else if move_right {
+		move_dir += 45
+	}
+}
+else {
+	if move_left {
+		move_dir = 180
+	}
+	else if move_right {
+		move_dir = 0
+	}
+}
+
+
 // Reset movement booleans
 move_up = false
 move_down = false
