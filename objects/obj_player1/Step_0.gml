@@ -33,4 +33,13 @@ if ((slap || trip || push) && !hit) {
 			obj_hp_bar2.current_hp -= push_damage;
 		}
 	}
+	
+if keyboard_check_pressed(ord("G")){
+	charge = 0;
+}
+if keyboard_check_direct(ord("G")){
+	charge+=1;
+}
+if keyboard_check_released(ord("G")) and charge == 10{
+	//hit function
 }
