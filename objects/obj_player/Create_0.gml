@@ -28,12 +28,15 @@ slap = false;
 trip = false;
 push = false; // rename to shove EDIT
 block = false;
+charge = false;
+charge_att = false;
 
 // for health and damage
 hp = 100;
 slap_damage = 10;
 trip_damage = 20;
 push_damage = 10;
+charge_damage = 25;
 // no block damage
 
 // for slap, trip, push
@@ -48,3 +51,5 @@ defend_timer = defend_duration;
 
 // for player collision (aka pushing)
 push_dir = 0;
+
+charge_timer = 60*2;

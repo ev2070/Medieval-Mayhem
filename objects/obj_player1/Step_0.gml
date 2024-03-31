@@ -13,13 +13,14 @@ if (!hit) {
 	if (keyboard_check(vk_shift)) { slap = true; }
 	if (keyboard_check(ord("Z"))) { trip  = true; }
 	if (keyboard_check(ord("X"))) { push  = true; }
+	if (keyboard_check(ord("G"))) { charge = true }
 }
 if (!defend) {
 	if (keyboard_check(ord("C"))) { block = true; }
 }
 
 // A hit can be a slap, trip, or push
-if ((slap || trip || push) && !hit) {
+if ((slap || trip || push || charge) && !hit) {
 	// If Player 2 is nearby & defenseless
 	// and you attack, you can reduce their HP
 	if (point_distance(x, y, obj_player2.x, obj_player2.y) <= 128 &&
@@ -32,16 +33,9 @@ if ((slap || trip || push) && !hit) {
 			obj_hp_bar2.current_hp -= trip_damage;
 		} else if (push) {
 			obj_hp_bar2.current_hp -= push_damage;
+		} else if (charge_att) {
+			obj_hp_bar2.current_hp -= charge_damage;
 		}
 	}
 	
-	if keyboard_check_pressed(ord("G")){
-		charge = 0;
-	}
-	if keyboard_check_direct(ord("G")){
-		charge+=1;
-	}
-	if keyboard_check_released(ord("G")) and charge == 10 {
-		//hit function
-	}
 }

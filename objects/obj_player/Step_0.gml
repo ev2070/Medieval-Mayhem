@@ -62,6 +62,15 @@ if (defend) {
 	}
 }
 
+if (charge) {
+	if keyboard_check_direct(ord("G")){
+		charge_timer--
+	}
+	if keyboard_check_released(ord("G")){
+		charge_att = true
+	}
+}
+
 //change move angle
 if move_up {
 	move_dir = 90
@@ -89,6 +98,7 @@ else {
 		move_dir = 0
 	}
 }
+
 
 
 // Reset movement booleans
