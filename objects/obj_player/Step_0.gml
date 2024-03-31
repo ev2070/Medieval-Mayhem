@@ -83,6 +83,9 @@ if (charge) {
 		charge_att = true
 		charge_timer = 60*2
 	}
+	else {
+		charge_att = false
+	}
 }
 
 //change move angle

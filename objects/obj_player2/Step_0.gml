@@ -22,18 +22,22 @@ if (!defend) {
 	if (keyboard_check(190))      { block = true; } // period .
 }
 
-// A hit can be a slap, trip, or push
-// Player 2 cannot hit if stunned
-if ((slap || trip || push || charge_att) && !hit && !stun) {
-	// If Player 1 is nearby & defenseless
-	// and you attack, you can reduce their HP,
-	// knock them back, and stun them
-	if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 && 
+
+/*
+if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 && 
 		obj_hp_bar1.current_hp > 0 && !obj_player1.defend) {
+	*/
+	
+//if player collides with an active hitbox - 
+if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_1.activated
+	&& obj_hp_bar2.current_hp > 0 && !obj_player2.defend){
 		
 		hit = true;
 		hit_timer = hit_duration;
 		
+		obj_hp_bar2.current_hp -= obj_hitbox_1.damage
+		
+		/*
 		if (slap) {
 			obj_hp_bar1.current_hp -= slap_damage;
 		} else if (trip) {
@@ -44,10 +48,14 @@ if ((slap || trip || push || charge_att) && !hit && !stun) {
 			obj_hp_bar1.current_hp -= charge_damage;
 			charge_att = false
 		}
-		
+		*/
 		var push_amount = 20;
-		var new_x = obj_player1.x;
-		var new_y = obj_player1.y;
+		var new_x = obj_player2.x;
+		var new_y = obj_player2.y;
+		
+		//knocked back by direction of the enemys attack
+		move_dir = obj_player1.move_dir
+		
 		
 		if (move_dir == 0) {
 			new_x += push_amount; // move right
@@ -73,11 +81,10 @@ if ((slap || trip || push || charge_att) && !hit && !stun) {
 		
 		// Check if the new position is within bounds
 		if (new_x >= left_bound && new_x <= right_bound && new_y >= upper_bound && new_y <= lower_bound) {
-			obj_player1.x = new_x;
-			obj_player1.y = new_y;
+			obj_player2.x = new_x;
+			obj_player2.y = new_y;
 		}
 		
-		obj_player1.stun = true;
-		obj_player1.stun_timer = stun_duration;
+		obj_player2.stun = true;
+		obj_player2.stun_timer = stun_duration;
 	}
-}

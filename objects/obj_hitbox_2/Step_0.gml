@@ -14,26 +14,41 @@ y = y + lengthdir_y(hitrange, myPlayer.move_dir);
 //Hitbox is activated when:
 // - simple Attack button pressed
 // - charge attack is released (Hitbox is active for longer)
-if myPlayer.slap { //attack button pressed 
-	hold_length += 1 //check how long the attack button is held
+
+
+// A hit can be a slap, trip, or push
+// Player 2 cannot hit if stunned
+if !myPlayer.hit && !myPlayer.stun && (myPlayer.slap or myPlayer.charge_att or myPlayer.trip) { //attack button pressed 
+	// If Player 2 is nearby & defenseless
+	// and you attack, you can reduce their HP,
+	// knock them back, and stun them
+	//Hitbox activated
+	myPlayer.hit = true;
+	myPlayer.hit_timer = myPlayer.hit_duration;
+	activated = true
+	hitbox_timer += 1
+	if myPlayer.slap { 
+		damage = myPlayer.slap_damage 
+		slap = false
+	}
+	else if myPlayer.trip { 
+		damage = myPlayer.trip_damage
+		trip = false
+	}
+	else if myPlayer.charge_att { 
+		damage = myPlayer.charge_damage 
+		myPlayer.charge_att = false
+	}
+	if hitbox_timer > 1{
+	//activated = false
+	hitbox_timer = 0
+	}
 }
+
 else {
-	if hold_length > 0 and hold_length < 60 { //quick button press ? 
-		hitbox_timer += 1
-		activated = true
-		if hitbox_timer > hitbox_normalatk_timer {
-			activated = false
-			hitbox_timer = 0
-			hold_length = 0
-		}
-	}
-	else { //long button hold --> Charge attack 
-		hold_length = 0 
-	}
+	activated = false
+	damage = 0
 }
-
-
-
 
  
 if activated = true {
