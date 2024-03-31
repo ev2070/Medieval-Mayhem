@@ -20,7 +20,8 @@ if (!defend) {
 
 // A hit can be a slap, trip, or push
 if ((slap || trip || push) && !hit) {
-	// If Player 2 is nearby and you attack, reduce their HP
+	// If Player 2 is nearby & defenseless
+	// and you attack, you can reduce their HP
 	if (point_distance(x, y, obj_player2.x, obj_player2.y) <= 128 &&
 		obj_hp_bar2.current_hp > 0 && !obj_player2.defend) {
 		hit = true;
