@@ -14,7 +14,7 @@ if fallen {
 	}
 	fall_timer += 1
 	//fall_timer += 1
-	if fall_timer = fall_timer_max {
+	if fall_timer == fall_timer_max {
 		
 		//audio_play_sound(snd_respawn, 0, false)
 		x = start_x
@@ -78,7 +78,8 @@ if (stun) {
 // Note: Player might not be able to charge if stunned?
 if (charge) {
 	charge_timer--
-	if charge_timer == 0{
+	if charge_timer <= 0 {
+		charge = false
 		charge_att = true
 		charge_timer = 60*2
 	}

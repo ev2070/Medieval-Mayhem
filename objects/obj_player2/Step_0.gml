@@ -11,9 +11,9 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 // Check for player 2's combat move
 if (!hit) {
-	if (keyboard_check(ord("N"))) { slap  = true; }
-	if (keyboard_check(ord("M"))) { trip  = true; }
-	if (keyboard_check(188))      { push  = true; } // comma  ,
+	if (keyboard_check(ord("N"))) { slap  = true;  }
+	if (keyboard_check(ord("M"))) { trip  = true;  }
+	if (keyboard_check(188))      { push  = true;  } // comma  ,
 	if (keyboard_check(ord("H"))) { charge = true; }
 }
 
@@ -24,7 +24,7 @@ if (!defend) {
 
 // A hit can be a slap, trip, or push
 // Player 2 cannot hit if stunned
-if ((slap || trip || push) && !hit && !stun) {
+if ((slap || trip || push || charge_att) && !hit && !stun) {
 	// If Player 1 is nearby & defenseless
 	// and you attack, you can reduce their HP,
 	// knock them back, and stun them
