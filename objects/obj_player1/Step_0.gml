@@ -41,6 +41,7 @@ if ((slap || trip || push || charge) && !hit && !stun) {
 			obj_hp_bar2.current_hp -= push_damage;
 		} else if (charge_att) {
 			obj_hp_bar2.current_hp -= charge_damage;
+			charge_att = false
 		}
 		
 		// A hit should make Player 2 move back

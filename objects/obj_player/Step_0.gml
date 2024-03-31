@@ -80,8 +80,9 @@ if (charge) {
 	if keyboard_check_direct(ord("G")){
 		charge_timer--
 	}
-	if keyboard_check_released(ord("G")){
+	if charge_timer == 0{
 		charge_att = true
+		charge_timer = 60*2
 	}
 }
 

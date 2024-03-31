@@ -38,6 +38,9 @@ if ((slap || trip || push) && !hit && !stun) {
 			obj_hp_bar1.current_hp -= trip_damage;
 		} else if (push) {
 			obj_hp_bar1.current_hp -= push_damage;
+		} else if (charge_att) {
+			obj_hp_bar1.current_hp -= charge_damage;
+			charge_att = false
 		}
 		
 		var push_amount = 20;
