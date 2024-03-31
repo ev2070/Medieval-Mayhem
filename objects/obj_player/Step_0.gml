@@ -77,9 +77,7 @@ if (stun) {
 
 // Note: Player might not be able to charge if stunned?
 if (charge) {
-	if keyboard_check_direct(ord("G")){
-		charge_timer--
-	}
+	charge_timer--
 	if charge_timer == 0{
 		charge_att = true
 		charge_timer = 60*2

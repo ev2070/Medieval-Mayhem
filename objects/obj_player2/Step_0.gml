@@ -8,11 +8,13 @@ if (keyboard_check(ord("J"))) { move_left  = true; }
 if (keyboard_check(ord("K"))) { move_down  = true; }
 if (keyboard_check(ord("L"))) { move_right = true; }
 
+
 // Check for player 2's combat move
 if (!hit) {
 	if (keyboard_check(ord("N"))) { slap  = true; }
 	if (keyboard_check(ord("M"))) { trip  = true; }
 	if (keyboard_check(188))      { push  = true; } // comma  ,
+	if (keyboard_check(ord("H"))) { charge = true; }
 }
 
 // Check for player 2's defense move
