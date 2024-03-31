@@ -39,7 +39,7 @@ else if (move_down)  { y+=spd; }
 else if (move_right) { x+=spd; }
 
 // A defense can be a block
-if (block && !block) {
+if (block && !defend) {
 	defend = true;
 	defend_timer = defend_duration;
 }
@@ -53,7 +53,7 @@ if (hit) {
 	}
 }
 
-// A defense lasts 1.5 seconds
+// A defense lasts 2 seconds
 if (defend) {
 	defend_timer--;
 	if (defend_timer <= 0) {

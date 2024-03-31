@@ -6,6 +6,7 @@ fall_timer = 0;
 fall_timer_max = 60;
 start_x = x
 start_y = y
+
 // speed
 spd = 3.25;
 
@@ -37,12 +38,12 @@ push_damage = 10;
 
 // for slap, trip, push
 hit = false;
-hit_duration = 60*0.5;
+hit_duration = 60*1.5;
 hit_timer = hit_duration;
 
 // for block
 defend = false;
-defend_duration = 60*0.5;
+defend_duration = 60*2;
 defend_timer = defend_duration;
 
 // for player collision (aka pushing)

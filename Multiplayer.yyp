@@ -49,7 +49,7 @@
     {"id":{"name":"spr_hurtbox","path":"sprites/spr_hurtbox/spr_hurtbox.yy",},},
     {"id":{"name":"spr_player1","path":"sprites/spr_player1/spr_player1.yy",},},
     {"id":{"name":"spr_player2","path":"sprites/spr_player2/spr_player2.yy",},},
-    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
+    {"id":{"name":"spr_danger_zone","path":"sprites/spr_danger_zone/spr_danger_zone.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

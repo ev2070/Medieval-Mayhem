@@ -20,11 +20,11 @@ if (!defend) {
 
 // A hit can be a slap, trip, or push
 if ((slap || trip || push) && !hit) {
-	hit = true;
-	hit_timer = hit_duration;
 	// If Player 2 is nearby and you attack, reduce their HP
 	if (point_distance(x, y, obj_player2.x, obj_player2.y) <= 128 &&
-		obj_hp_bar2.current_hp > 0) {
+		obj_hp_bar2.current_hp > 0 && !obj_player2.defend) {
+		hit = true;
+		hit_timer = hit_duration;
 		if (slap) {
 			obj_hp_bar2.current_hp -= slap_damage;
 		} else if (trip) {
@@ -34,13 +34,13 @@ if ((slap || trip || push) && !hit) {
 		}
 	}
 	
-if keyboard_check_pressed(ord("G")){
-	charge = 0;
-}
-if keyboard_check_direct(ord("G")){
-	charge+=1;
-}
-if keyboard_check_released(ord("G")) and charge == 10 {
-	//hit function
-}
+	if keyboard_check_pressed(ord("G")){
+		charge = 0;
+	}
+	if keyboard_check_direct(ord("G")){
+		charge+=1;
+	}
+	if keyboard_check_released(ord("G")) and charge == 10 {
+		//hit function
+	}
 }

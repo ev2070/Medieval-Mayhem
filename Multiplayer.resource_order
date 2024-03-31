@@ -30,6 +30,5 @@
     {"name":"spr_hitbox","order":2,"path":"sprites/spr_hitbox/spr_hitbox.yy",},
     {"name":"spr_hurtbox","order":3,"path":"sprites/spr_hurtbox/spr_hurtbox.yy",},
     {"name":"spr_player1","order":1,"path":"sprites/spr_player1/spr_player1.yy",},
-    {"name":"Sprite3","order":5,"path":"sprites/Sprite3/Sprite3.yy",},
   ],
 }

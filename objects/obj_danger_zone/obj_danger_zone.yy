@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite3",
-    "path":"sprites/Sprite3/Sprite3.yy",
+    "name":"spr_danger_zone",
+    "path":"sprites/spr_danger_zone/spr_danger_zone.yy",
   },
   "spriteMaskId":null,
   "visible":true,
