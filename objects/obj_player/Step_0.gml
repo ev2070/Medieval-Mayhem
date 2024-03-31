@@ -33,13 +33,17 @@ x = clamp(x, left_bound, right_bound);
 y = clamp(y, upper_bound, lower_bound);
 
 // Move player
-	 if (move_up)    { y-=spd; }
-else if (move_down)  { y+=spd; } 
-	 if (move_left)  { x-=spd; }
-else if (move_right) { x+=spd; }
+// Player cannot move if stunned
+if (!stun) {
+		 if (move_up)    { y-=spd; }
+	else if (move_down)  { y+=spd; } 
+		 if (move_left)  { x-=spd; }
+	else if (move_right) { x+=spd; }
+}
 
 // A defense can be a block
-if (block && !defend) {
+// Player cannot block if stunned
+if (block && !defend && !stun) {
 	defend = true;
 	defend_timer = defend_duration;
 }
@@ -62,6 +66,16 @@ if (defend) {
 	}
 }
 
+// A stun lasts 1 seconds
+if (stun) {
+	stun_timer--;
+	if (stun_timer <= 0) {
+		stun = false;
+		stun_timer = stun_duration;
+	}
+}
+
+// Note: Player might not be able to charge if stunned?
 if (charge) {
 	if keyboard_check_direct(ord("G")){
 		charge_timer--
@@ -99,8 +113,6 @@ else {
 	}
 }
 
-
-
 // Reset movement booleans
 move_up = false
 move_down = false
@@ -112,5 +124,3 @@ slap = false;
 trip = false;
 push = false;
 block = false;
-
-

@@ -49,7 +49,10 @@ defend = false;
 defend_duration = 60*2;
 defend_timer = defend_duration;
 
-// for player collision (aka pushing)
-push_dir = 0;
+// for hit stun (post-hit player state)
+// cannot hit, defend, or move if stunned
+stun = false;
+stun_duration = 60*1;
+stun_timer = 0;
 
 charge_timer = 60*2;
