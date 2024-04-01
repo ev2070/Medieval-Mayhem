@@ -49,12 +49,11 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 			charge_att = false
 		}
 		*/
-		var push_amount = 50;
+		var push_amount = 20;
 		var new_x = obj_player2.x;
 		var new_y = obj_player2.y;
 		
 		//knocked back by direction of the enemys attack
-		var old_dir = move_dir
 		move_dir = obj_player1.move_dir
 		
 		
@@ -88,12 +87,10 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 		
 		obj_player2.stun = true;
 		obj_player2.stun_timer = stun_duration;
-		
-		move_dir = old_dir
 	}
 	
 	
-if (charge) and !stun {
+if (charge) {
 	if keyboard_check_released(ord("H")){
 		charge_timer = 60*2
 		charge = false
