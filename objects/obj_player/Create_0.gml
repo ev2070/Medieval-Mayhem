@@ -52,7 +52,7 @@ defend_timer = defend_duration;
 // for hit stun (post-hit player state)
 // cannot hit, defend, or move if stunned
 stun = false;
-stun_duration = 60*1;
+stun_duration = 60*2;
 stun_timer = 0;
 
 charge_timer = 60*2;
