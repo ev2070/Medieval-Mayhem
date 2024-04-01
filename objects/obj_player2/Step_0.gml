@@ -10,7 +10,7 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 
 // Check for player 2's combat move
-if (!hit) {
+if (!hit) {//change keys
 	if (keyboard_check(ord("N"))) { slap  = true;  }
 	if (keyboard_check(ord("M"))) { trip  = true;  }
 	if (keyboard_check(188))      { push  = true;  } // comma  ,
@@ -18,7 +18,7 @@ if (!hit) {
 }
 
 // Check for player 2's defense move
-if (!defend) {
+if (!defend) { //change key
 	if (keyboard_check(190))      { block = true; } // period .
 }
 
