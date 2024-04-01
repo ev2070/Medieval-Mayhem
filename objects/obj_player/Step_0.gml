@@ -76,17 +76,17 @@ if (stun) {
 }
 
 // Note: Player might not be able to charge if stunned?
-if (charge) {
-	charge_timer--
-	if charge_timer <= 0 {
-		charge = false
-		charge_att = true
-		charge_timer = 60*2
-	}
-	else {
-		charge_att = false
-	}
-}
+//if (charge) {
+//	charge_timer--
+//	if charge_timer <= 0 {
+//		charge = false
+//		charge_att = true
+//		charge_timer = 60*2
+//	}
+//	else {
+//		charge_att = false
+//	}
+//}
 
 //change move angle
 if move_up {

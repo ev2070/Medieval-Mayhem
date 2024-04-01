@@ -14,6 +14,7 @@ if (!hit) {
 	if (keyboard_check(ord("Z"))) { trip  = true; }
 	if (keyboard_check(ord("X"))) { push  = true; }
 	if (keyboard_check(ord("G"))) { charge = true }
+	
 }
 
 // Check for player 1's defense move
@@ -109,6 +110,9 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 		}
 		*/
 		var push_amount = 20;
+		if (charge_att){
+			push_amount = 50;
+		}
 		var new_x = obj_player1.x;
 		var new_y = obj_player1.y;
 		
@@ -146,3 +150,21 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 		obj_player1.stun = true;
 		obj_player1.stun_timer = stun_duration
 	}
+	
+
+if (charge) {
+	if keyboard_check_released(ord("G")){
+		charge_timer = 60*2
+		charge = false
+	}else{
+		charge_timer--
+	}
+	if charge_timer <= 0 {
+		charge = false
+		charge_att = true
+		charge_timer = 60*2
+	}
+	else {
+		charge_att = false
+	}
+}
