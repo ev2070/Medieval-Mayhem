@@ -41,7 +41,7 @@ charge_damage = 25;
 
 // for slap, trip, push
 hit = false;
-hit_duration = 60*1.5;
+hit_duration = 30;
 hit_timer = hit_duration;
 
 // for block

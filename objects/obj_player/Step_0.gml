@@ -1,6 +1,6 @@
 // obj_player step
 
-if collision_circle(x,y,1, obj_danger_zone, false, false) { 
+if collision_circle(x,y,1, obj_danger_zone, false, false ){ 
 		fallen = true
 	}
 

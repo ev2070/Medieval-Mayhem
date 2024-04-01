@@ -39,7 +39,7 @@ if !myPlayer.hit && !myPlayer.stun && (myPlayer.slap or myPlayer.charge_att or m
 		damage = myPlayer.charge_damage 
 		myPlayer.charge_att = false
 	}
-	if hitbox_timer > 1{
+	if hitbox_timer > 1 {
 	//activated = false
 	hitbox_timer = 0
 	}
