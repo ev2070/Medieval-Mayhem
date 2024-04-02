@@ -51,7 +51,6 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 		
 		//knocked back by direction of the enemys attack ? 
 		move_dir = obj_player2.move_dir
-		
 		if (move_dir == 0) {
 			new_x += push_amount; // move right
 		} else if (move_dir == 45) {
@@ -86,7 +85,7 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 	
 
 if (charge) {
-	if keyboard_check_released(ord("G")){
+	if keyboard_check_released(ord("G")) {
 		charge_timer = 60*2
 		charge = false
 	}else{
@@ -98,6 +97,8 @@ if (charge) {
 		charge_timer = 60*2
 	}
 	else {
+		if obj_hitbox_1.attack_type != "archer" {
 		charge_att = false
+		}
 	}
 }

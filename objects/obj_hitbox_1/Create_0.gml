@@ -29,5 +29,7 @@ hold_length = 0
 attack_type = " "
 huntress_damage = 30
 wizard_damage = 50
-archer_damage = 20 //scale by distance from foe.
+archer_damage = 1 //scale by distance from foe.
+shot_dir = 0
+
 worm_damage = 40 //Stun other player for longer.
