@@ -33,8 +33,8 @@ x = clamp(x, left_bound, right_bound);
 y = clamp(y, upper_bound, lower_bound);
 
 // Move player
-// Player cannot move if stunned
-if (!stun) {
+// Player cannot move if stunned or if they JUST hit
+if (!stun and !hit) {
 		 if (move_up)    { y-=spd; }
 	else if (move_down)  { y+=spd; } 
 		 if (move_left)  { x-=spd; }
@@ -48,7 +48,7 @@ if (block && !defend && !stun) {
 	defend_timer = defend_duration;
 }
 
-// A hit lasts 1.5 seconds
+// A hit lasts 0.5 seconds
 if (hit) {
 	hit_timer--;
 	if (hit_timer <= 0) {
@@ -66,7 +66,7 @@ if (defend) {
 	}
 }
 
-// A stun lasts 1 seconds
+// A stun lasts 2 seconds
 if (stun) {
 	stun_timer--;
 	if (stun_timer <= 0) {
