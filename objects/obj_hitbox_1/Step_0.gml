@@ -2,11 +2,12 @@
 // You can write your code in this editor
 
 //FOR TESTING: pick attack type with 1,2,3,4.
+/*
 if keyboard_check_pressed(ord("1")) {attack_type = "huntress";}
 else if keyboard_check_pressed(ord("2")) {attack_type = "wizard";}
 else if keyboard_check_pressed(ord("3")) {attack_type = "archer";}
 else if keyboard_check_pressed(ord("4")) {attack_type = "worm";}
-
+*/
 
 
 //hitbox placed ahead in the direction of the player movement
@@ -56,11 +57,11 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 	else { //Archer is a traveling hitbox
 		canmove = true
 		activated = true
-		x = x + lengthdir_x(30, myPlayer.move_dir);
-		y = y + lengthdir_y(30, myPlayer.move_dir);
+		x = x + lengthdir_x(50, myPlayer.move_dir);
+		y = y + lengthdir_y(50, myPlayer.move_dir);
 		
 		//scale damage by distance between players:
-		damage = distance_to_object(obj_player1) % 10
+		damage = distance_to_object(obj_player1) % 20
 		
 		if collision_circle(x,y,30,obj_danger_zone,true,false) {
 			canmove = false

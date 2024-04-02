@@ -1,5 +1,23 @@
 // obj_player1 step
 
+// SELECTION OF AVATAR
+if player1 = "Huntress" {
+	obj_hitbox_1.attack_type = "huntress";
+	sprite_index = spr_huntress
+	}
+else if player1 = "Wizard" {
+	obj_hitbox_1.attack_type = "wizard";
+	sprite_index = spr_wizard
+	}
+else if player1 = "Archer" {
+	obj_hitbox_1.attack_type = "archer";
+	sprite_index = spr_archer
+	}
+else if player1 = "Worm" {
+	obj_hitbox_1.attack_type = "worm";
+	sprite_index = spr_worm
+	}
+
 event_inherited();
 
 // Check for player 1's movement

@@ -2,6 +2,25 @@
 
 event_inherited();
 
+// SELECTION OF AVATAR
+if player2 = "Huntress" {
+	obj_hitbox_2.attack_type = "huntress";
+	sprite_index = spr_huntress
+	}
+else if player2 = "Wizard" {
+	obj_hitbox_2.attack_type = "wizard";
+	sprite_index = spr_wizard
+	}
+else if player2 = "Archer" {
+	obj_hitbox_2.attack_type = "archer";
+	sprite_index = spr_archer
+	}
+else if player2 = "Worm" {
+	obj_hitbox_2.attack_type = "worm";
+	sprite_index = spr_worm
+	}
+
+
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }
 if (keyboard_check(ord("J"))) { move_left  = true; }
@@ -89,9 +108,9 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 		obj_player2.stun_timer = stun_duration;
 	}
 	
-	
+
 if (charge) {
-	if keyboard_check_released(ord("H")){
+	if keyboard_check_released(ord("H")) {
 		charge_timer = 60*2
 		charge = false
 	}else{
@@ -103,6 +122,8 @@ if (charge) {
 		charge_timer = 60*2
 	}
 	else {
+		if obj_hitbox_2.attack_type != "archer" {
 		charge_att = false
+		}
 	}
 }
