@@ -63,10 +63,17 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 		//scale damage by distance between players:
 		damage = distance_to_object(obj_player1) % 20
 		
-		if collision_circle(x,y,30,obj_danger_zone,true,false) {
-			//canmove = false
+		if collision_circle(x,y,30,obj_danger_zone,true,false){
 			myPlayer.charge_att = false
-			//activated = false
+			activated = false
+			canmove = false
+		}
+		
+		if collision_circle(x,y,1,obj_player2,true,false) {
+			myPlayer.charge_att = false
+			activated = false
+			obj_hp_bar2.current_hp -= damage
+			canmove = false
 		}
 	}
 }
