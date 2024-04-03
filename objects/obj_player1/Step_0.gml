@@ -28,16 +28,13 @@ if (keyboard_check(ord("D"))) { move_right = true; }
 
 // Check for player 1's combat move
 if (!hit) { //change keys
-	if (keyboard_check(vk_shift)) { slap = true;  }
-	if (keyboard_check(ord("Z"))) { trip  = true; }
-	if (keyboard_check(ord("X"))) { push  = true; }
-	if (keyboard_check(ord("G"))) { charge = true }
+	if (keyboard_check(ord("C"))) { charge = true }
 	
 }
 
 // Check for player 1's defense move
 if (!defend) {
-	if (keyboard_check(ord("C"))) { block = true; } //change key
+	if (keyboard_check(ord("X"))) { block = true; } //change key
 }
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_2.activated
@@ -103,7 +100,7 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 	
 
 if (charge) {
-	if keyboard_check_released(ord("G")) {
+	if keyboard_check_released(ord("C")) {
 		charge_timer = 60*2
 		charge = false
 	}else{

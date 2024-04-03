@@ -30,15 +30,12 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 // Check for player 2's combat move
 if (!hit) {//change keys
-	if (keyboard_check(ord("N"))) { slap  = true;  }
-	if (keyboard_check(ord("M"))) { trip  = true;  }
-	if (keyboard_check(188))      { push  = true;  } // comma  ,
-	if (keyboard_check(ord("H"))) { charge = true; }
+	if (keyboard_check(ord("N"))) { charge = true; }
 }
 
 // Check for player 2's defense move
 if (!defend) { //change key
-	if (keyboard_check(190))      { block = true; } // period .
+	if (keyboard_check(ord("M")))      { block = true; } 
 }
 
 
@@ -110,7 +107,7 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 	
 
 if (charge) {
-	if keyboard_check_released(ord("H")) {
+	if keyboard_check_released(ord("M")) {
 		charge_timer = 60*2
 		charge = false
 	}else{
