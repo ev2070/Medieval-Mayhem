@@ -34,7 +34,7 @@ y = clamp(y, upper_bound, lower_bound);
 
 // Move player
 // Player cannot move if stunned or if they JUST hit
-if (!stun and !hit) {
+if (!stun and !hit and can_move) {
 		 if (move_up)    { y-=spd; }
 	else if (move_down)  { y+=spd; } 
 		 if (move_left)  { x-=spd; }

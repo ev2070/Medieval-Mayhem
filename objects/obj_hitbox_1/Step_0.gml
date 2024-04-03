@@ -64,9 +64,9 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 		damage = distance_to_object(obj_player1) % 20
 		
 		if collision_circle(x,y,30,obj_danger_zone,true,false) {
-			canmove = false
+			//canmove = false
 			myPlayer.charge_att = false
-			activated = false
+			//activated = false
 		}
 	}
 }
