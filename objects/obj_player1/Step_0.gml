@@ -4,18 +4,22 @@
 if player1 = "Huntress" {
 	obj_hitbox_1.attack_type = "huntress";
 	sprite_index = spr_huntress
+	name = "Huntress"
 	}
 else if player1 = "Wizard" {
 	obj_hitbox_1.attack_type = "wizard";
 	sprite_index = spr_wizard
+	name = "Wizard"
 	}
 else if player1 = "Archer" {
 	obj_hitbox_1.attack_type = "archer";
 	sprite_index = spr_archer
+	name = "Archer"
 	}
 else if player1 = "Worm" {
 	obj_hitbox_1.attack_type = "worm";
 	sprite_index = spr_worm
+	name = "Worm"
 	}
 
 event_inherited();
