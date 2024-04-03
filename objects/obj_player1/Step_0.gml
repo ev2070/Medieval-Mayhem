@@ -3,8 +3,8 @@
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
 		global.score_player2 += 1
 	}
-
-
+	
+	
 // SELECTION OF AVATAR
 if player1 = "Huntress" {
 	obj_hitbox_1.attack_type = "huntress";
@@ -15,11 +15,13 @@ else if player1 = "Wizard" {
 	obj_hitbox_1.attack_type = "wizard";
 	sprite_index = spr_wizard
 	name = "Wizard"
+	spd = 2.5
 	}
 else if player1 = "Archer" {
 	obj_hitbox_1.attack_type = "archer";
 	sprite_index = spr_archer
 	name = "Archer"
+	spd = 2.25
 	}
 else if player1 = "Worm" {
 	obj_hitbox_1.attack_type = "worm";

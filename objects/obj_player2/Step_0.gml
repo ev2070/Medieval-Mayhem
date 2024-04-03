@@ -17,18 +17,19 @@ else if player2 = "Wizard" {
 	obj_hitbox_2.attack_type = "wizard";
 	sprite_index = spr_wizard
 	name = "Wizard"
+	spd = 2.5
 	}
 else if player2 = "Archer" {
 	obj_hitbox_2.attack_type = "archer";
 	sprite_index = spr_archer
 	name = "Archer"
+	spd = 2.25
 	}
 else if player2 = "Worm" {
 	obj_hitbox_2.attack_type = "worm";
 	sprite_index = spr_worm
 	name = "Worm"
 	}
-
 
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }
