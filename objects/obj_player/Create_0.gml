@@ -6,6 +6,7 @@ fall_timer = 0;
 fall_timer_max = 60;
 start_x = x
 start_y = y
+image_speed = 1;
 
 // speed
 spd = 3.25;
@@ -61,3 +62,19 @@ charge_timer = 60;
 regular_push_amount = 20;
 large_push_amount = 50;
 push_amount = 0;
+
+
+//save player's sprite to call later
+spr_up = 0
+spr_down = 0
+spr_left = 0
+spr_right = 0
+spr_up_left = 0
+spr_down_left = 0
+spr_up_right = 0
+spr_down_right = 0
+
+
+
+
+

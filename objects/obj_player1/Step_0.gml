@@ -4,33 +4,46 @@ if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{
 		global.score_player2 += 1
 	}
 	
+//move avatar selection to avatoar manager ? 
+
+// SELECTION OF AVATAR1
+if room = Room1 {
+	if player1 = "Huntress" {
+		obj_hitbox_1.attack_type = "huntress";
+		sprite_index = spr_huntress
+		name = "Huntress"
+		}
+	else if player1 = "Wizard" {
+		obj_hitbox_1.attack_type = "wizard";
+		sprite_index = spr_wizard
+		name = "Wizard"
+		spd = 2.5
+		}
+	else if player1 = "Archer" {
+		obj_hitbox_1.attack_type = "archer";
 	
-// SELECTION OF AVATAR
-if player1 = "Huntress" {
-	obj_hitbox_1.attack_type = "huntress";
-	sprite_index = spr_huntress
-	name = "Huntress"
+		//set sprites
+		obj_player1.spr_up = spr_archer_up
+		//obj_player1.spr_idle = spr_archer
+		obj_player1.spr_down = spr_archer
+		obj_player1.spr_left = spr_archer
+		obj_player1.spr_right = spr_archer
+		obj_player1.spr_up_left = spr_archer
+		obj_player1.spr_down_left = spr_archer
+		obj_player1.spr_up_right = spr_archer
+		obj_player1.spr_down_right = spr_archer
+		name = "Archer"
+		spd = 2.25
+		}
+	else if player1 = "Worm" {
+		obj_hitbox_1.attack_type = "worm";
+		sprite_index = spr_worm
+		name = "Worm"
 	}
-else if player1 = "Wizard" {
-	obj_hitbox_1.attack_type = "wizard";
-	sprite_index = spr_wizard
-	name = "Wizard"
-	spd = 2.5
-	}
-else if player1 = "Archer" {
-	obj_hitbox_1.attack_type = "archer";
-	sprite_index = spr_archer
-	name = "Archer"
-	spd = 2.25
-	}
-else if player1 = "Worm" {
-	obj_hitbox_1.attack_type = "worm";
-	sprite_index = spr_worm
-	name = "Worm"
-	}
+}
 
+image_speed = 1
 event_inherited();
-
 // Check for player 1's movement
 if (keyboard_check(ord("W"))) { move_up    = true; }
 if (keyboard_check(ord("A"))) { move_left  = true; }
@@ -79,6 +92,8 @@ if (push_amount >= 0) {
 		new_y -= offset;
 	} else if (move_dir == 90) {
 		new_y -= offset; // move up
+		
+		
 	} else if (move_dir == 135) {
 		new_x -= offset; // move up-left
 		new_y -= offset;

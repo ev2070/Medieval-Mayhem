@@ -88,9 +88,12 @@ if (stun) {
 //	}
 //}
 
-//change move angle
+//change move angle 
+//and change sprite
 if move_up {
 	move_dir = 90
+	sprite_index = spr_up
+	image_speed = 1;
 	if move_left {
 		move_dir += 45
 	}

@@ -33,4 +33,3 @@ if room == rm_avatar_select{
 		room_goto(rm_avatars)
 	}
 }
-
