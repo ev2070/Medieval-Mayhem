@@ -107,7 +107,7 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 	
 
 if (charge) {
-	if keyboard_check_released(ord("M")) {
+	if keyboard_check_released(ord("N")) {
 		charge_timer = 60
 		charge = false
 	}else{
