@@ -57,58 +57,52 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 		
 		obj_hp_bar2.current_hp -= obj_hitbox_1.damage
 		
-		/*
-		if (slap) {
-			obj_hp_bar1.current_hp -= slap_damage;
-		} else if (trip) {
-			obj_hp_bar1.current_hp -= trip_damage;
-		} else if (push) {
-			obj_hp_bar1.current_hp -= push_damage;
-		} else if (charge_att) {
-			obj_hp_bar1.current_hp -= charge_damage;
-			charge_att = false
+		push_amount = regular_push_amount;
+		if (charge_att){
+			push_amount = large_push_amount;
 		}
-		*/
-		var push_amount = 20;
-		var new_x = obj_player2.x;
-		var new_y = obj_player2.y;
-		
-		//knocked back by direction of the enemys attack
+		//knocked back by direction of the enemys attack ? 
 		move_dir = obj_player1.move_dir
-		
-		
-		if (move_dir == 0) {
-			new_x += push_amount; // move right
-		} else if (move_dir == 45) {
-			new_x += push_amount; // move up_right
-			new_y -= push_amount;
-		} else if (move_dir == 90) {
-			new_y -= push_amount; // move up
-		} else if (move_dir == 135) {
-			new_x -= push_amount; // move up-left
-			new_y -= push_amount;
-		} else if (move_dir == 180) {
-			new_x -= push_amount; // move left
-		} else if (move_dir == 225) {
-			new_x -= push_amount; // move down-left
-			new_y += push_amount;
-		} else if (move_dir == 270) {
-			new_y += push_amount; // move down
-		} else if (move_dir == 315) {
-			new_x += push_amount; // move down-right
-			new_y += push_amount;
-		}
-		
-		// Check if the new position is within bounds
-		if (new_x >= left_bound && new_x <= right_bound && new_y >= upper_bound && new_y <= lower_bound) {
-			obj_player2.x = new_x;
-			obj_player2.y = new_y;
-		}
 		
 		obj_player2.stun = true;
 		obj_player2.stun_timer = stun_duration;
 	}
+
+if (push_amount >= 0) {
+	var new_x = x;
+	var new_y = y;
+	var offset = 2;
 	
+	if (move_dir == 0) {
+		new_x += offset; // move right
+	} else if (move_dir == 45) {
+		new_x += offset; // move up_right
+		new_y -= offset;
+	} else if (move_dir == 90) {
+		new_y -= offset; // move up
+	} else if (move_dir == 135) {
+		new_x -= offset; // move up-left
+		new_y -= offset;
+	} else if (move_dir == 180) {
+		new_x -= offset; // move left
+	} else if (move_dir == 225) {
+		new_x -= offset; // move down-left
+		new_y += offset;
+	} else if (move_dir == 270) {
+		new_y += offset; // move down
+	} else if (move_dir == 315) {
+		new_x += offset; // move down-right
+		new_y += offset;
+	}
+		
+	// Check if the new position is within room bounds
+	if (new_x >= left_bound && new_x <= right_bound && new_y >= upper_bound && new_y <= lower_bound) {
+		x = new_x;
+		y = new_y;
+	}
+	
+	push_amount -= offset;
+}
 
 if (charge) {
 	if keyboard_check_released(ord("N")) {

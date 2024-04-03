@@ -56,3 +56,8 @@ stun_duration = 60*2;
 stun_timer = 0;
 
 charge_timer = 60;
+
+// for push amount (knocked back)
+regular_push_amount = 20;
+large_push_amount = 50;
+push_amount = 0;
