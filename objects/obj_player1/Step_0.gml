@@ -1,5 +1,10 @@
 // obj_player1 step
 
+if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
+		global.score_player2 += 1
+	}
+
+
 // SELECTION OF AVATAR
 if player1 = "Huntress" {
 	obj_hitbox_1.attack_type = "huntress";

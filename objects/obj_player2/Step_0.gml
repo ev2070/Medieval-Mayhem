@@ -2,6 +2,11 @@
 
 event_inherited();
 
+if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
+		global.score_player1 += 1
+	}
+
+
 // SELECTION OF AVATAR
 if player2 = "Huntress" {
 	obj_hitbox_2.attack_type = "huntress";
