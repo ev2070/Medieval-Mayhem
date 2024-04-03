@@ -56,12 +56,19 @@ stun = false;
 stun_duration = 60*2;
 stun_timer = 0;
 
-charge_timer = 60;
+charge_duration = 60;
+charge_timer = charge_duration;
 
 // for push amount (knocked back)
 regular_push_amount = 20;
 large_push_amount = 50;
 push_amount = 0;
+
+// for charge bar
+charge_width_target = charge_timer;
+charge_width_curr = 0;
+charge_bar_color = c_red;  // becomes green when charging
+charge_slide_spd = (charge_width_curr*1.5)/60;
 
 
 //save player's sprite to call later

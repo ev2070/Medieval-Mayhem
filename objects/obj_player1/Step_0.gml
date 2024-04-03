@@ -51,8 +51,7 @@ if (keyboard_check(ord("D"))) { move_right = true; }
 
 // Check for player 1's combat move
 if (!hit) { //change keys
-	if (keyboard_check(ord("C"))) { charge = true }
-	
+	if (keyboard_check(ord("C"))) { charge = true }	
 }
 
 // Check for player 1's defense move
@@ -118,20 +117,42 @@ if (push_amount >= 0) {
 }
 
 if (charge) {
-	if keyboard_check_released(ord("C")) {
-		charge_timer = 60
+	if (keyboard_check_released(ord("C"))) {
+		charge_timer = charge_duration
 		charge = false
-	}else{
+		
+		charge_slide_spd = (charge_width_curr*1.5)/60;
+		if (charge_slide_spd == 0) { // Avoid X/0
+			charge_slide_spd = 0.1
+		}
+	} else {
 		charge_timer--
+		if (charge_width_curr < charge_width_target) {
+			charge_width_curr++;
+			var ratio = charge_width_curr / charge_width_target;
+			charge_bar_color = make_color_rgb(lerp(255, 0, ratio), lerp(0, 255, ratio), 0);
+		} else { // Prevents color skip to red
+			charge_width_curr = charge_width_target;
+			charge_bar_color = make_color_rgb(0, 255, 0);
+		}
 	}
 	if charge_timer <= 0 {
 		charge = false
 		charge_att = true
-		charge_timer = 60
+		charge_timer = charge_duration
+		
+		charge_width_curr = 0;
 	}
 	else {
 		if obj_hitbox_1.attack_type != "archer" {
-		charge_att = false
+			charge_att = false
 		}
+	}
+}
+
+if (charge_width_curr > 0 && !charge) {
+	charge_width_curr -= charge_slide_spd;
+	if (charge_width_curr < 0) {
+		charge_width_curr = 0;
 	}
 }
