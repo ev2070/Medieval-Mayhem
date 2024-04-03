@@ -72,7 +72,10 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 		if collision_circle(x,y,1,obj_player2,true,false) {
 			myPlayer.charge_att = false
 			activated = false
-			obj_hp_bar2.current_hp -= damage
+			myPlayer.push_amount = 10
+			if !obj_player2.defend {
+				obj_hp_bar2.current_hp -= damage
+			}
 			canmove = false
 		}
 	}

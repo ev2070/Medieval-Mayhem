@@ -4,8 +4,7 @@ if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{
 		global.score_player2 += 1
 	}
 	
-//move avatar selection to avatoar manager ? 
-
+//move sprite/avatar selection to avatar manager later ? 
 // SELECTION OF AVATAR1
 if room = Room1 {
 	if player1 = "Huntress" {
@@ -62,7 +61,7 @@ if (!defend) {
 }
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_2.activated
-	&& obj_hp_bar1.current_hp > 0 && !obj_player1.defend){
+	&& obj_hp_bar1.current_hp > 0 && !obj_player1.defend) {
 	
 		hit = true;
 		hit_timer = hit_duration;
