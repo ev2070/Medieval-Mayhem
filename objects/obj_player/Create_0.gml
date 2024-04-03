@@ -55,4 +55,4 @@ stun = false;
 stun_duration = 60*2;
 stun_timer = 0;
 
-charge_timer = 60*2;
+charge_timer = 60;

@@ -101,7 +101,7 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_
 
 if (charge) {
 	if keyboard_check_released(ord("C")) {
-		charge_timer = 60*2
+		charge_timer = 60
 		charge = false
 	}else{
 		charge_timer--
@@ -109,7 +109,7 @@ if (charge) {
 	if charge_timer <= 0 {
 		charge = false
 		charge_att = true
-		charge_timer = 60*2
+		charge_timer = 60
 	}
 	else {
 		if obj_hitbox_1.attack_type != "archer" {
