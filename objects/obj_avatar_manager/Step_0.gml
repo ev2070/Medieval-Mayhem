@@ -47,6 +47,20 @@ if room = Room1 {
 		sprite_index = spr_wizard
 		name = "Wizard"
 		spd = 2.5
+		
+		//set sprites
+		obj_player1.spr_idle = spr_wizard_idle
+		obj_player1.spr_up = spr_wizard_up
+		obj_player1.spr_down = spr_wizard_down
+		obj_player1.spr_right = spr_wizard_right
+		obj_player1.spr_up_right = spr_wizard_up_right
+		obj_player1.spr_down_right = spr_wizard_idle
+		obj_player1.spr_up_atk = spr_wizard_up_atk
+		obj_player1.spr_down_atk = spr_wizard_down_atk
+		obj_player1.spr_up_right_atk = spr_wizard_up_right_atk
+		obj_player1.spr_down_right_atk = spr_wizard_down_right_atk
+		
+		
 		}
 	else if player1 = "Archer" {
 		obj_hitbox_1.attack_type = "archer";
@@ -71,6 +85,13 @@ if room = Room1 {
 		name = "Worm"
 	}
 	
+	
+	
+	
+	
+	
+	
+	
 	//set Player 2 Sprites
 	if player2 = "Huntress" {
 		obj_hitbox_2.attack_type = "huntress";
@@ -82,6 +103,19 @@ if room = Room1 {
 		sprite_index = spr_wizard
 		name = "Wizard"
 		spd = 2.5
+		
+		//set sprites
+		obj_player2.spr_idle = spr_wizard_idle
+		obj_player2.spr_up = spr_wizard_up
+		obj_player2.spr_down = spr_wizard_down
+		obj_player2.spr_right = spr_wizard_right
+		obj_player2.spr_up_right = spr_wizard_up_right
+		obj_player2.spr_down_right = spr_wizard_idle
+		obj_player2.spr_up_atk = spr_wizard_up_atk
+		obj_player2.spr_down_atk = spr_wizard_down_atk
+		obj_player2.spr_up_right_atk = spr_wizard_up_right_atk
+		obj_player2.spr_down_right_atk = spr_wizard_down_right_atk
+		
 		}
 	else if player2 = "Archer" {
 		obj_hitbox_2.attack_type = "archer";
