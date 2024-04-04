@@ -24,7 +24,6 @@
   "ResourceOrderSettings":[
     {"name":"obj_avatar_choice","order":14,"path":"objects/obj_avatar_choice/obj_avatar_choice.yy",},
     {"name":"obj_avatar_manager","order":15,"path":"objects/obj_avatar_manager/obj_avatar_manager.yy",},
-    {"name":"obj_block","order":9,"path":"objects/obj_block/obj_block.yy",},
     {"name":"obj_danger_zone","order":4,"path":"objects/obj_danger_zone/obj_danger_zone.yy",},
     {"name":"obj_endScreen","order":22,"path":"objects/obj_endScreen/obj_endScreen.yy",},
     {"name":"obj_hitbox_1","order":10,"path":"objects/obj_hitbox_1/obj_hitbox_1.yy",},
@@ -41,6 +40,7 @@
     {"name":"obj_timer","order":12,"path":"objects/obj_timer/obj_timer.yy",},
     {"name":"obj_wizard","order":2,"path":"objects/obj_wizard/obj_wizard.yy",},
     {"name":"obj_worm","order":3,"path":"objects/obj_worm/obj_worm.yy",},
+    {"name":"obj_damage_indicator","order":23,"path":"objects/obj_damage_indicator/obj_damage_indicator.yy",},
     {"name":"rm_avatar_select","order":1,"path":"rooms/rm_avatar_select/rm_avatar_select.yy",},
     {"name":"rm_avatars","order":2,"path":"rooms/rm_avatars/rm_avatars.yy",},
     {"name":"Attack2","order":1,"path":"sprites/Attack2/Attack2.yy",},

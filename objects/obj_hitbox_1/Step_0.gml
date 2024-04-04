@@ -75,6 +75,8 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 			myPlayer.push_amount = 10
 			if !obj_player2.defend {
 				obj_hp_bar2.current_hp -= damage
+				var a_damage_indicator = instance_create_depth(obj_player2.x-sprite_width/3,obj_player2.y-sprite_height,-1,obj_damage_indicator);
+				a_damage_indicator.damage = damage;
 			}
 			canmove = false
 		}

@@ -61,7 +61,11 @@ if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_
 		hit = true;
 		hit_timer = hit_duration;
 		
-		obj_hp_bar2.current_hp -= obj_hitbox_1.damage
+		if (player2 != "Archer") { // Archer damage logic in hitboxes
+			obj_hp_bar2.current_hp -= obj_hitbox_1.damage
+			var a_damage_indicator = instance_create_depth(x+5,y-sprite_height,-1,obj_damage_indicator);
+			a_damage_indicator.damage = obj_hitbox_1.damage;
+		}
 		
 		push_amount = regular_push_amount;
 		if (charge_att){
