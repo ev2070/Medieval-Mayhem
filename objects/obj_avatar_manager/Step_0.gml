@@ -59,6 +59,7 @@ if room = Room1 {
 		obj_player1.spr_down_atk = spr_wizard_down_atk
 		obj_player1.spr_up_right_atk = spr_wizard_up_right_atk
 		obj_player1.spr_down_right_atk = spr_wizard_down_right_atk
+		obj_player1.spr_right_atk = spr_wizard_right_atk
 		
 		
 		}
@@ -76,6 +77,7 @@ if room = Room1 {
 		obj_player1.spr_down_atk = spr_archer_down_atk
 		obj_player1.spr_up_right_atk = spr_archer_up_right_atk
 		obj_player1.spr_down_right_atk = spr_archer_down_right_atk
+		obj_player1.spr_right_atk = spr_archer_right_atk
 		name = "Archer"
 		spd = 2.25
 		}
@@ -115,6 +117,7 @@ if room = Room1 {
 		obj_player2.spr_down_atk = spr_wizard_down_atk
 		obj_player2.spr_up_right_atk = spr_wizard_up_right_atk
 		obj_player2.spr_down_right_atk = spr_wizard_down_right_atk
+		obj_player2.spr_right_atk = spr_wizard_right_atk
 		
 		}
 	else if player2 = "Archer" {
@@ -131,6 +134,7 @@ if room = Room1 {
 		obj_player2.spr_down_atk = spr_archer_down_atk
 		obj_player2.spr_up_right_atk = spr_archer_up_right_atk
 		obj_player2.spr_down_right_atk = spr_archer_down_right_atk
+		obj_player2.spr_right_atk = spr_archer_right_atk
 		name = "Archer"
 		spd = 2.25
 		}

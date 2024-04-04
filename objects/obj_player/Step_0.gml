@@ -50,10 +50,12 @@ if (block && !defend && !stun) {
 
 // A hit lasts 0.5 seconds
 if (hit) {
+	attacking = true
 	hit_timer--;
 	if (hit_timer <= 0) {
 		hit = false;
 		hit_timer = hit_duration;
+		attacking = false
 	}
 }
 
@@ -121,26 +123,45 @@ else {
 }
 
 //select sprite for Movement
-if move_dir = 90 { sprite_index = spr_up; }
-else if move_dir = 135 { sprite_index = spr_up_right;
-						 image_xscale = -1 ;}
-else if move_dir = 45 { sprite_index = spr_up_right; }
-else if move_dir = 270 { sprite_index = spr_down; }
-else if move_dir = 225 { sprite_index = spr_down_right;
-						 image_xscale = -1; }
-else if move_dir = 315 { sprite_index = spr_down_right; }
+if !attacking {
+	if move_dir = 90 { sprite_index = spr_up; }
+	else if move_dir = 135 { sprite_index = spr_up_right;
+							 image_xscale = -1 ;}
+	else if move_dir = 45 { sprite_index = spr_up_right; }
+	else if move_dir = 270 { sprite_index = spr_down; }
+	else if move_dir = 225 { sprite_index = spr_down_right;
+							 image_xscale = -1; }
+	else if move_dir = 315 { sprite_index = spr_down_right; }
 
-else if move_dir = 180 { sprite_index = spr_right; 
-						 image_xscale = -1; }
-else { sprite_index = spr_right; }
+	else if move_dir = 180 { sprite_index = spr_right; 
+							 image_xscale = -1; }
+	else { sprite_index = spr_right; }
 
+}
 //if not moving, idle
-if !move_up && !move_down && !move_right && !move_left {
+if !move_up && !move_down && !move_right && !move_left and !attacking {
 	sprite_index = spr_idle
 }
 else {
 	image_speed = 1
 }
+
+//attack_animation
+if attacking {
+	if move_dir = 90 { sprite_index = spr_up_atk; }
+	else if move_dir = 135 { sprite_index = spr_up_right_atk;
+							 image_xscale = -1 ;}
+	else if move_dir = 45 { sprite_index = spr_up_right_atk; }
+	else if move_dir = 270 { sprite_index = spr_down_atk; }
+	else if move_dir = 225 { sprite_index = spr_down_right_atk;
+							 image_xscale = -1; }
+	else if move_dir = 315 { sprite_index = spr_down_right_atk; }
+
+	else if move_dir = 180 { sprite_index = spr_right_atk; 
+							 image_xscale = -1; }
+	else if move_dir = 0{ sprite_index = spr_right_atk ; }
+}
+
 // Reset movement booleans
 move_up = false
 move_down = false

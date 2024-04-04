@@ -55,6 +55,8 @@ if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pres
 		}
 	}
 	else { //Archer is a traveling hitbox
+		
+		//myPlayer.hit_timer = myPlayer.hit_duration;
 		canmove = true
 		activated = true
 		x = x + lengthdir_x(50, myPlayer.move_dir);

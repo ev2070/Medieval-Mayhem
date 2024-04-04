@@ -87,6 +87,7 @@ if (push_amount >= 0) {
 }
 
 if (charge) {
+	//sprite_index = spr_down_right_atk
 	if (keyboard_check_released(ord("C"))) {
 		charge_timer = charge_duration
 		charge = false

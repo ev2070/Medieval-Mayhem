@@ -81,7 +81,9 @@ spr_up_atk = 0
 spr_down_atk = 0
 spr_up_right_atk = 0
 spr_down_right_atk = 0
+spr_right_atk = 0
 spr_idle = 0
+attacking = false
 
 
 
