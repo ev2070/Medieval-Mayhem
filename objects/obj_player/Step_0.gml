@@ -90,10 +90,11 @@ if (stun) {
 
 //change move angle 
 //and change sprite
+image_xscale = 1
+image_speed = 1;
+
 if move_up {
 	move_dir = 90
-	sprite_index = spr_up
-	image_speed = 1;
 	if move_left {
 		move_dir += 45
 	}
@@ -119,6 +120,27 @@ else {
 	}
 }
 
+//select sprite for Movement
+if move_dir = 90 { sprite_index = spr_up; }
+else if move_dir = 135 { sprite_index = spr_up_right;
+						 image_xscale = -1 ;}
+else if move_dir = 45 { sprite_index = spr_up_right; }
+else if move_dir = 270 { sprite_index = spr_down; }
+else if move_dir = 225 { sprite_index = spr_down_right;
+						 image_xscale = -1; }
+else if move_dir = 315 { sprite_index = spr_down_right; }
+
+else if move_dir = 180 { sprite_index = spr_right; 
+						 image_xscale = -1; }
+else { sprite_index = spr_right; }
+
+//if not moving, idle
+if !move_up && !move_down && !move_right && !move_left {
+	sprite_index = spr_idle
+}
+else {
+	image_speed = 1
+}
 // Reset movement booleans
 move_up = false
 move_down = false

@@ -76,6 +76,7 @@
     {"id":{"name":"Jump","path":"sprites/Jump/Jump.yy",},},
     {"id":{"name":"spr_archer_down_atk","path":"sprites/spr_archer_down_atk/spr_archer_down_atk.yy",},},
     {"id":{"name":"spr_archer_down_right_atk","path":"sprites/spr_archer_down_right_atk/spr_archer_down_right_atk.yy",},},
+    {"id":{"name":"spr_archer_idle","path":"sprites/spr_archer_idle/spr_archer_idle.yy",},},
     {"id":{"name":"spr_archer_down_right","path":"sprites/spr_archer_down_right/spr_archer_down_right.yy",},},
     {"id":{"name":"spr_archer_down","path":"sprites/spr_archer_down/spr_archer_down.yy",},},
     {"id":{"name":"spr_archer_right_atk","path":"sprites/spr_archer_right_atk/spr_archer_right_atk.yy",},},

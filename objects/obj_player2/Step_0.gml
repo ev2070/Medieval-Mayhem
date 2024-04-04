@@ -5,32 +5,6 @@ event_inherited();
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
 		global.score_player1 += 1
 	}
-
-
-// SELECTION OF AVATAR
-if player2 = "Huntress" {
-	obj_hitbox_2.attack_type = "huntress";
-	sprite_index = spr_huntress
-	name = "Huntress"
-	}
-else if player2 = "Wizard" {
-	obj_hitbox_2.attack_type = "wizard";
-	sprite_index = spr_wizard
-	name = "Wizard"
-	spd = 2.5
-	}
-else if player2 = "Archer" {
-	obj_hitbox_2.attack_type = "archer";
-	sprite_index = spr_archer
-	name = "Archer"
-	spd = 2.25
-	}
-else if player2 = "Worm" {
-	obj_hitbox_2.attack_type = "worm";
-	sprite_index = spr_worm
-	name = "Worm"
-	}
-
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }
 if (keyboard_check(ord("J"))) { move_left  = true; }

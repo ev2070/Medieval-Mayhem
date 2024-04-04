@@ -74,12 +74,14 @@ charge_slide_spd = (charge_width_curr*1.5)/60;
 //save player's sprite to call later
 spr_up = 0
 spr_down = 0
-spr_left = 0
 spr_right = 0
-spr_up_left = 0
-spr_down_left = 0
 spr_up_right = 0
 spr_down_right = 0
+spr_up_atk = 0
+spr_down_atk = 0
+spr_up_right_atk = 0
+spr_down_right_atk = 0
+spr_idle = 0
 
 
 

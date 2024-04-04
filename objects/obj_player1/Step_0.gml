@@ -6,40 +6,6 @@ if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{
 	
 //move sprite/avatar selection to avatar manager later ? 
 // SELECTION OF AVATAR1
-if room = Room1 {
-	if player1 = "Huntress" {
-		obj_hitbox_1.attack_type = "huntress";
-		sprite_index = spr_huntress
-		name = "Huntress"
-		}
-	else if player1 = "Wizard" {
-		obj_hitbox_1.attack_type = "wizard";
-		sprite_index = spr_wizard
-		name = "Wizard"
-		spd = 2.5
-		}
-	else if player1 = "Archer" {
-		obj_hitbox_1.attack_type = "archer";
-	
-		//set sprites
-		obj_player1.spr_up = spr_archer_up
-		//obj_player1.spr_idle = spr_archer
-		obj_player1.spr_down = spr_archer
-		obj_player1.spr_left = spr_archer
-		obj_player1.spr_right = spr_archer
-		obj_player1.spr_up_left = spr_archer
-		obj_player1.spr_down_left = spr_archer
-		obj_player1.spr_up_right = spr_archer
-		obj_player1.spr_down_right = spr_archer
-		name = "Archer"
-		spd = 2.25
-		}
-	else if player1 = "Worm" {
-		obj_hitbox_1.attack_type = "worm";
-		sprite_index = spr_worm
-		name = "Worm"
-	}
-}
 
 image_speed = 1
 event_inherited();
