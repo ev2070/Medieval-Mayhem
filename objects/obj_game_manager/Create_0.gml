@@ -12,3 +12,4 @@ fight = "FIGHT";
 fight_scale_factor = 1;
 
 global.paused = false;
+
