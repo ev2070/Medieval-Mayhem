@@ -93,7 +93,7 @@ if (charge) {
 		charge_timer = charge_duration
 		charge = false
 		
-		charge_slide_spd = (charge_width_curr*1.5)/60;
+		charge_slide_spd = (charge_width_curr*10)/60;
 		if (charge_slide_spd == 0) { // Avoid X/0
 			charge_slide_spd = 0.1
 		}
