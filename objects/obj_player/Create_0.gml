@@ -85,7 +85,7 @@ spr_right_atk = 0
 spr_idle = 0
 attacking = false
 
-
-
+// for collision mask
+mask_index = spr_collision_mask;
 
 
