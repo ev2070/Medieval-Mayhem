@@ -108,12 +108,24 @@ if (charge) {
 	if keyboard_check_released(ord("N")) {
 		charge = false
 		
+		if (charge_duration == 60 && audio_is_playing(snd_charge_short2)) {
+			audio_stop_sound(snd_charge_short2);
+		} else if (charge_duration == 90 && audio_is_playing(snd_charge_long2)) {
+			audio_stop_sound(snd_charge_long2);
+		}
+		
 		charge_slide_spd = (charge_width_curr*10)/60;
 		if (charge_slide_spd == 0) { // Avoid X/0
 			charge_slide_spd = 0.1
 		}
 	}else{
 		charge_timer--
+		
+		if (charge_duration == 60 && !audio_is_playing(snd_charge_short2)) {
+			audio_play_sound(snd_charge_short2, 1, false);
+		} else if (charge_duration == 90 && !audio_is_playing(snd_charge_long2)) {
+			audio_play_sound(snd_charge_long2, 1, false);
+		}
 		
 		if (charge_width_curr < charge_width_target) {
 			charge_width_curr++;
