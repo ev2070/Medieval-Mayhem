@@ -5,7 +5,7 @@ if (!global.paused) {
 	    timer -= 1; // Decrement the timer by 1 each frame
 		
 		// Play ticking clock sound when there's only 15s left
-		if (frames_elapsed > 2580 && frames_elapsed % 60 == 0) {
+		if (timer < 16*60 && timer > 60 && frames_elapsed % 60 == 0) {
             audio_play_sound(snd_tick, 1, false);
         }
 	}
