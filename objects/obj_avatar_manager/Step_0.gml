@@ -40,6 +40,17 @@ if room = Room1 {
 	if player1 = "Huntress" {
 		obj_hitbox_1.attack_type = "huntress";
 		sprite_index = spr_huntress
+		obj_player1.spr_idle = spr_huntress_idle
+		obj_player1.spr_up = spr_huntress_up
+		obj_player1.spr_down = spr_huntress_down
+		obj_player1.spr_right = spr_huntress_right
+		obj_player1.spr_up_right = spr_huntress_up_right
+		obj_player1.spr_down_right = spr_huntress_idle
+		obj_player1.spr_up_atk = spr_huntress_up_atk
+		obj_player1.spr_down_atk = spr_huntress_down_atk
+		obj_player1.spr_up_right_atk = spr_huntress_up_right_atk
+		obj_player1.spr_down_right_atk = spr_huntress_down_right_atk
+		obj_player1.spr_right_atk = spr_huntress_right_atk
 		name = "Huntress"
 		}
 	else if player1 = "Wizard" {
@@ -98,8 +109,21 @@ if room = Room1 {
 	//set Player 2 Sprites
 	if player2 = "Huntress" {
 		obj_hitbox_2.attack_type = "huntress";
-		sprite_index = spr_huntress
 		name = "Huntress"
+		sprite_index = spr_huntress
+		
+		obj_player2.spr_idle = spr_huntress_idle
+		obj_player2.spr_up = spr_huntress_up
+		obj_player2.spr_down = spr_huntress_down
+		obj_player2.spr_right = spr_huntress_right
+		obj_player2.spr_up_right = spr_huntress_up_right
+		obj_player2.spr_down_right = spr_huntress_idle
+		obj_player2.spr_up_atk = spr_huntress_up_atk
+		obj_player2.spr_down_atk = spr_huntress_down_atk
+		obj_player2.spr_up_right_atk = spr_huntress_up_right_atk
+		obj_player2.spr_down_right_atk = spr_huntress_down_right_atk
+		obj_player2.spr_right_atk = spr_huntress_right_atk
+		
 		}
 	else if player2 = "Wizard" {
 		obj_hitbox_2.attack_type = "wizard";
