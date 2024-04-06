@@ -1,4 +1,4 @@
-bar_width = 200;
+bar_width = 400;
 bar_height = 20;
 
 max_hp = 100;
