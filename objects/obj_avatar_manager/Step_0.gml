@@ -96,15 +96,20 @@ if room = Room1 {
 	else if player1 = "Worm" {
 		obj_hitbox_1.attack_type = "worm";
 		sprite_index = spr_worm
+		
+		obj_player1.spr_idle = spr_knight_idle
+		obj_player1.spr_up = spr_knight_up
+		obj_player1.spr_down = spr_knight_down
+		obj_player1.spr_right = spr_knight_right
+		obj_player1.spr_up_right = spr_knight_up_right
+		obj_player1.spr_down_right = spr_knight_idle
+		obj_player1.spr_up_atk = spr_knight_up_atk
+		obj_player1.spr_down_atk = spr_knight_down_atk
+		obj_player1.spr_up_right_atk = spr_knight_up_right_atk
+		obj_player1.spr_down_right_atk = spr_knight_down_right_atk
+		obj_player1.spr_right_atk = spr_knight_right_atk
 		name = "Worm"
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	//set Player 2 Sprites
 	if player2 = "Huntress" {
@@ -168,5 +173,18 @@ if room = Room1 {
 		obj_hitbox_2.attack_type = "worm";
 		sprite_index = spr_worm
 		name = "Worm"
+		
+		obj_player2.spr_idle = spr_knight_idle
+		obj_player2.spr_up = spr_knight_up
+		obj_player2.spr_down = spr_knight_down
+		obj_player2.spr_right = spr_knight_right
+		obj_player2.spr_up_right = spr_knight_up_right
+		obj_player2.spr_down_right = spr_knight_idle
+		obj_player2.spr_up_atk = spr_knight_up_atk
+		obj_player2.spr_down_atk = spr_knight_down_atk
+		obj_player2.spr_up_right_atk = spr_knight_up_right_atk
+		obj_player2.spr_down_right_atk = spr_knight_down_right_atk
+		obj_player2.spr_right_atk = spr_knight_right_atk
+		
 	}
 }
