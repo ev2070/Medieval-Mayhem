@@ -91,6 +91,7 @@ if room = Room1 {
 		obj_player1.spr_down_right_atk = spr_archer_down_right_atk
 		obj_player1.spr_right_atk = spr_archer_right_atk
 		obj_player1.charge_duration = 90
+		obj_player1.charge_width_target = 90;
 		obj_player1.name = "Archer"
 		obj_player1.spd = 2.25
 		}
@@ -168,6 +169,7 @@ if room = Room1 {
 		obj_player2.spr_down_right_atk = spr_archer_down_right_atk
 		obj_player2.spr_right_atk = spr_archer_right_atk
 		obj_player2.charge_duration = 90
+		obj_player2.charge_width_target = 90;
 		obj_player2.name = "Archer"
 		obj_player2.spd = 2.25
 		}

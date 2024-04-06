@@ -66,7 +66,7 @@ large_push_amount = 50;
 push_amount = 0;
 
 // for charge bar
-charge_width_target = charge_timer;
+charge_width_target = charge_duration;
 charge_width_curr = 0;
 charge_bar_color = c_red;  // becomes green when charging
 charge_slide_spd = (charge_width_curr*1.5)/60;

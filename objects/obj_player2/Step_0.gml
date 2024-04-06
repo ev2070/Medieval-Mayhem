@@ -15,7 +15,10 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 // Check for player 2's combat move
 if (!hit) { //change keys
 	if (keyboard_check_pressed(ord("N"))) { //so players won't spam/hold down charge button for entire game 
-		if (keyboard_check(ord("N"))) { charge = true }	
+		if (keyboard_check(ord("N"))) {
+			charge = true;
+			charge_timer = charge_duration;
+		}	
 	}
 }
 
@@ -103,7 +106,6 @@ if (push_amount >= 0) {
 
 if (charge) {
 	if keyboard_check_released(ord("N")) {
-		charge_timer = charge_duration
 		charge = false
 		
 		charge_slide_spd = (charge_width_curr*10)/60;
@@ -125,7 +127,6 @@ if (charge) {
 	if charge_timer <= 0 {
 		charge = false
 		charge_att = true
-		charge_timer = charge_duration
 		
 		charge_width_curr = 0;
 	}
