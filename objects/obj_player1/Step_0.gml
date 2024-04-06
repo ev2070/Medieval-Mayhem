@@ -37,7 +37,7 @@ if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
 			//knocked back by direction of the enemys attack ? 
 			move_dir = obj_player2.move_dir
 		}
-	
+		
 		hit = true;
 		hit_timer = hit_duration;
 		

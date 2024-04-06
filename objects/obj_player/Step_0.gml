@@ -1,5 +1,9 @@
 // obj_player step
 
+if (obj_game_manager.pre_game) {
+	sprite_index = spr_idle
+}
+
 if (!global.paused) {
 	if collision_circle(x,y,1, obj_danger_zone, false, false ){ 
 			fallen = true
