@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_huntress",
-    "path":"sprites/spr_huntress/spr_huntress.yy",
+    "name":"spr_huntress_down_right_atk",
+    "path":"sprites/spr_huntress_down_right_atk/spr_huntress_down_right_atk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

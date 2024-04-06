@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_archer",
-    "path":"sprites/spr_archer/spr_archer.yy",
+    "name":"spr_archer_idle",
+    "path":"sprites/spr_archer_idle/spr_archer_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

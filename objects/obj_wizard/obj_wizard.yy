@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wizard",
-    "path":"sprites/spr_wizard/spr_wizard.yy",
+    "name":"spr_wizard_down_right_atk",
+    "path":"sprites/spr_wizard_down_right_atk/spr_wizard_down_right_atk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

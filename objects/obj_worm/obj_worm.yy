@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_worm",
-    "path":"sprites/spr_worm/spr_worm.yy",
+    "name":"spr_knight_down_right",
+    "path":"sprites/spr_knight_down_right/spr_knight_down_right.yy",
   },
   "spriteMaskId":null,
   "visible":true,
