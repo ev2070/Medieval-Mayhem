@@ -1,6 +1,6 @@
 // obj_game_manager step
 
-global.paused = (pre_game || post_game); // can add more booleans here
+global.paused = (pre_game || post_game || obj_endScreen.visible); // can add more booleans here
 
 if (pre_game) {
 	pre_game_timer--;
@@ -20,7 +20,6 @@ if (room == Room1 && !post_game && obj_timer.timer == 0 && game_over_scale_facto
 
 if (post_game) {
 	post_game_timer--;
-	show_debug_message(string(post_game_timer));
 	
 	if (post_game_timer <= 0) {
 		post_game = false;
