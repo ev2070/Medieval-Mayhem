@@ -22,8 +22,3 @@ if (room == Room1 && post_game) {
     draw_text_transformed(center_x, center_y, game_over, game_over_scale_factor, game_over_scale_factor, 0);
 }
 
-// Display end screen
-//if (room == Room1 && game_over_scale_factor > 1 && !post_game) {
-//	draw_text(room_width/2, room_height/2-20, global.winner);
-//    draw_text(room_width/2, room_height/2+20, "Press Enter to restart the game");
-//}
