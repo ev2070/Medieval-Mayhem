@@ -18,8 +18,11 @@ if (!global.paused) {
 		if fall_timer == fall_timer_max {
 		
 			//audio_play_sound(snd_respawn, 0, false)
-			x = start_x
-			y = start_y
+			//reset Both player positions
+			obj_player1.x = obj_player1.start_x
+			obj_player1.y = obj_player1.start_y
+			obj_player2.x = obj_player2.start_x
+			obj_player2.y = obj_player2.start_y
 			image_angle = 0
 			image_xscale = 1
 			image_yscale = 1
@@ -27,6 +30,7 @@ if (!global.paused) {
 			fall_timer = 0
 			can_move = true
 		}
+		
 	}
 
 	// Player must stay within bounds

@@ -2,7 +2,7 @@
 
 event_inherited();
 
-if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
+if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player1 += 1
 	}
 // Check for player 2's movement
@@ -32,7 +32,18 @@ if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 &&
 	
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
-	&& obj_hp_bar2.current_hp > 0 && !obj_player2.defend){
+	&& obj_hp_bar2.current_hp > 0){
+		prev_dir = move_dir
+		//player still is pushed by an attack but doesn't take damage:
+		if !obj_player2.defend {
+			push_amount = regular_push_amount;
+			if (charge_att){
+				push_amount = large_push_amount;
+			}
+			//knocked back by direction of the enemys attack ? 
+			move_dir = obj_player1.move_dir
+		}
+		
 		
 		hit = true;
 		hit_timer = hit_duration;

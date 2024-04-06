@@ -1,12 +1,9 @@
 // obj_player1 step
 
-if collision_circle(x,y,1, obj_danger_zone, false, false ) and !fallen{ 
+if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player2 += 1
 	}
 	
-//move sprite/avatar selection to avatar manager later ? 
-// SELECTION OF AVATAR1
-
 image_speed = 1
 event_inherited();
 // Check for player 1's movement
@@ -29,7 +26,17 @@ if (!defend) {
 }
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
-	&& obj_hp_bar1.current_hp > 0 && !obj_player1.defend) {
+	&& obj_hp_bar1.current_hp > 0) {
+		prev_dir = move_dir
+		//player still is pushed by an attack but doesn't take damage:
+		if !obj_player1.defend {
+			push_amount = regular_push_amount;
+			if (charge_att){
+				push_amount = large_push_amount;
+			}
+			//knocked back by direction of the enemys attack ? 
+			move_dir = obj_player2.move_dir
+		}
 	
 		hit = true;
 		hit_timer = hit_duration;
@@ -39,13 +46,7 @@ if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
 			var a_damage_indicator = instance_create_depth(x-sprite_width/2,y-sprite_height,-1,obj_damage_indicator);
 			a_damage_indicator.damage = obj_hitbox_2.damage;
 		}
-
-		push_amount = regular_push_amount;
-		if (charge_att){
-			push_amount = large_push_amount;
-		}
-		//knocked back by direction of the enemys attack ? 
-		move_dir = obj_player2.move_dir
+		
 		
 		obj_player1.stun = true;
 		obj_player1.stun_timer = stun_duration

@@ -75,7 +75,8 @@ if (!global.paused) {
 			if collision_circle(x,y,1,obj_player2,true,false) {
 				myPlayer.charge_att = false
 				activated = false
-				myPlayer.push_amount = 10
+				obj_player2.push_amount = 10
+				myPlayer.move_dir = obj_player1.move_dir
 				if !obj_player2.defend {
 					obj_hp_bar2.current_hp -= damage
 					var a_damage_indicator = instance_create_depth(obj_player2.x-sprite_width/3,obj_player2.y-sprite_height,-1,obj_damage_indicator);
