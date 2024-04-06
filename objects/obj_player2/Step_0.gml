@@ -13,8 +13,10 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 
 // Check for player 2's combat move
-if (!hit) {//change keys
-	if (keyboard_check(ord("N"))) { charge = true; }
+if (!hit) { //change keys
+	if (keyboard_check_pressed(ord("N"))) { //so players won't spam/hold down charge button for entire game 
+		if (keyboard_check(ord("N"))) { charge = true }	
+	}
 }
 
 // Check for player 2's defense move

@@ -25,7 +25,8 @@ if (!global.paused) {
 	// - simple Attack button pressed
 	// - charge attack is released (Hitbox is active for longer)
 
-	if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pressed 
+	if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pressed
+		myPlayer.attacking = true
 		shot_dir = myPlayer.move_dir
 		//Change attack type for character.
 		if attack_type != "archer" {

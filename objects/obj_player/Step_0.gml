@@ -161,6 +161,10 @@ if (!global.paused) {
 		else if move_dir = 180 { sprite_index = spr_right_atk; 
 								 image_xscale = -1; }
 		else if move_dir = 0{ sprite_index = spr_right_atk ; }
+		
+		if image_index > image_number-1 {
+			attacking = false
+		}
 	}
 
 	// Reset movement booleans

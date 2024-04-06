@@ -26,6 +26,7 @@ if (!global.paused) {
 	// - charge attack is released (Hitbox is active for longer)
 
 	if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pressed 
+		myPlayer.attacking = true
 		shot_dir = myPlayer.move_dir
 		//Change attack type for character.
 		if attack_type != "archer" {
@@ -80,6 +81,7 @@ if (!global.paused) {
 					a_damage_indicator.damage = damage;
 				}
 				canmove = false
+				
 			}
 		}
 	}
