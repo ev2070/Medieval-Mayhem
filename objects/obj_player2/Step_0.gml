@@ -31,13 +31,13 @@ if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 &&
 	*/
 	
 //if player collides with an active hitbox - 
-if (collision_circle(x,y,sprite_width/2, obj_hitbox_1,true,false) && obj_hitbox_1.activated
+if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 	&& obj_hp_bar2.current_hp > 0 && !obj_player2.defend){
 		
 		hit = true;
 		hit_timer = hit_duration;
 		
-		if (player2 != "Archer") { // Archer damage logic in hitboxes
+		if (player1 != "Archer") { // Archer damage logic in hitboxes
 			obj_hp_bar2.current_hp -= obj_hitbox_1.damage
 			var a_damage_indicator = instance_create_depth(x+5,y-sprite_height,-1,obj_damage_indicator);
 			a_damage_indicator.damage = obj_hitbox_1.damage;

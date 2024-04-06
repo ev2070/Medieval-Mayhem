@@ -28,13 +28,13 @@ if (!defend) {
 	if (keyboard_check(ord("X"))) { block = true; } //change key
 }
 //if player collides with an active hitbox - 
-if (collision_circle(x,y,sprite_width/2, obj_hitbox_2,true,false) && obj_hitbox_2.activated
+if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
 	&& obj_hp_bar1.current_hp > 0 && !obj_player1.defend) {
 	
 		hit = true;
 		hit_timer = hit_duration;
 		
-		if (player1 != "Archer") { // Archer damage logic in hitboxes
+		if (player2 != "Archer") { // Archer damage logic in hitboxes
 			obj_hp_bar1.current_hp -= obj_hitbox_2.damage
 			var a_damage_indicator = instance_create_depth(x-sprite_width/2,y-sprite_height,-1,obj_damage_indicator);
 			a_damage_indicator.damage = obj_hitbox_2.damage;
