@@ -56,11 +56,13 @@ if (!global.paused) {
 			}
 		}
 		else { //Archer is a traveling hitbox
+			sprite_index = spr_arrow_ATK
+			image_angle = myPlayer.move_dir
 			canmove = true
 			activated = true
 			//myPlayer.hit_timer = myPlayer.hit_duration;
-			x = x + lengthdir_x(50, myPlayer.move_dir);
-			y = y + lengthdir_y(50, myPlayer.move_dir);
+			x = x + lengthdir_x(40, myPlayer.move_dir);
+			y = y + lengthdir_y(40, myPlayer.move_dir);
 		
 			//scale damage by distance between players:
 			damage = distance_to_object(obj_player2) div 20
@@ -95,11 +97,16 @@ if (!global.paused) {
 		image_angle = 0
 	}
 
- 
-	if activated = true {
+	if myPlayer.attacking { //change sprite 
+		//seelect based on atk type
+		if player2 = "Wizard" { sprite_index = spr_ATK2; }
+		else if player2 = "Huntress" or player2 = "Worm" {
+			sprite_index = spr_ATK1;
+		}
 		image_alpha = 1
 	}
 	else {
-		image_alpha = 0.3
+		image_alpha = 0.01
+		image_angle = 0
 	}
 }

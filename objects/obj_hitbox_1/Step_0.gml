@@ -26,6 +26,8 @@ if (!global.paused) {
 	// - charge attack is released (Hitbox is active for longer)
 
 	if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pressed
+		
+		image_index = 0
 		myPlayer.attacking = true
 		shot_dir = myPlayer.move_dir
 		//Change attack type for character.
@@ -56,7 +58,8 @@ if (!global.paused) {
 			}
 		}
 		else { //Archer is a traveling hitbox
-		
+			sprite_index = spr_arrow_ATK
+			image_angle = myPlayer.move_dir
 			//myPlayer.hit_timer = myPlayer.hit_duration;
 			canmove = true
 			activated = true
@@ -92,14 +95,18 @@ if (!global.paused) {
 		damage = 0
 		image_xscale = 1
 		image_yscale = 1
-		image_angle = 0
 	}
 
- 
-	if activated = true {
+	if myPlayer.attacking { //change sprite 
+		//seelect based on atk type
+		if player1 = "Wizard" { sprite_index = spr_ATK2; }
+		else if player1 = "Huntress" or player1 = "Worm" {
+			sprite_index = spr_ATK1;
+		}
 		image_alpha = 1
 	}
 	else {
-		image_alpha = 0.3
+		image_alpha = 0.01
+		image_angle = 0
 	}
 }

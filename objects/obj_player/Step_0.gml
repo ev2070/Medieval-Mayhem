@@ -75,7 +75,9 @@ if (!global.paused) {
 			defend = false;
 			defend_timer = defend_duration;
 		}
+		//draw_el
 	}
+	else {image_blend = c_white}
 
 	// A stun lasts 2 seconds
 	if (stun) {
@@ -84,7 +86,9 @@ if (!global.paused) {
 			stun = false;
 			stun_timer = stun_duration;
 		}
+		image_blend = c_red //change color if stunned
 	}
+	else {image_blend = c_white}
 
 	// Note: Player might not be able to charge if stunned?
 	//if (charge) {
