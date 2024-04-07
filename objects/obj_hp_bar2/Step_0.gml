@@ -5,6 +5,7 @@ event_inherited();
 	
 //}
  if current_hp = 0 {
+	ScreenShake(7,15)
 	obj_player2.fallen = true
 	current_hp = max_hp
 	global.score_player1 += 1;
