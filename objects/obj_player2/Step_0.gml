@@ -37,8 +37,34 @@ if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 &&
 if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 	&& obj_hp_bar2.current_hp > 0){
 		prev_dir = move_dir
+		
+		if !obj_player2.defend { //if NOT defending, take damage and be stunned
+			obj_player2.stun = true;
+			obj_player2.stun_timer = stun_duration;
+			if (player1 != "Archer") { // Archer damage logic in hitboxes
+				obj_hp_bar2.current_hp -= obj_hitbox_1.damage
+				var a_damage_indicator = instance_create_depth(x+5,y-sprite_height,-1,obj_damage_indicator);
+				a_damage_indicator.damage = obj_hitbox_1.damage;
+			}
+			
+		}
+		//always get pushed by attacks - 
+		push_amount = regular_push_amount;
+		if (charge_att){
+			push_amount = large_push_amount;
+		}
+		//knocked back by direction of the enemys attack ? 
+		move_dir = obj_player1.move_dir
+		}
+		
+		//move_dir = prev_dir
+		
+		
+		
+		
+		/*
 		//player still is pushed by an attack but doesn't take damage:
-		if !obj_player2.defend {
+		if obj_player2.defend {
 			obj_player2.stun = true;
 			obj_player2.stun_timer = stun_duration;
 			push_amount = regular_push_amount;
@@ -48,6 +74,7 @@ if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 			//knocked back by direction of the enemys attack ? 
 			move_dir = obj_player1.move_dir
 		}
+		else {
 		
 		//hit = true;
 		//hit_timer = hit_duration;
@@ -64,8 +91,9 @@ if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 		}
 		//knocked back by direction of the enemys attack ? 
 		move_dir = obj_player1.move_dir
+		}*/
 		
-	}
+	//}
 
 if (push_amount >= 0) {
 	var new_x = x;
