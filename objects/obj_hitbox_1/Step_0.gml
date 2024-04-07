@@ -67,7 +67,7 @@ if (!global.paused) {
 			y = y + lengthdir_y(50, myPlayer.move_dir);
 		
 			//scale damage by distance between players:
-			damage = distance_to_object(obj_player1) % 20
+			damage = distance_to_object(obj_player1) div 20
 		
 			if collision_circle(x,y,30,obj_danger_zone,true,false){
 				myPlayer.charge_att = false
