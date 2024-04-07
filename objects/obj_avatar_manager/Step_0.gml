@@ -29,7 +29,7 @@ if room == rm_avatar_select{
 	else if keyboard_check_pressed(ord("I")){
 		player2 = "Worm"
 	}
-	if keyboard_check_pressed(vk_enter){
+	if keyboard_check_pressed(vk_enter) and player1 != 0 and player2 != 0 {
 		room_goto(rm_avatars)
 	}
 }
