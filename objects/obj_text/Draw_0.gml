@@ -17,6 +17,6 @@ draw_text(1050, 510, "Stuns opponent for a longer")
 draw_text(1050, 525, "amount of time after an attack")
 
 draw_text(room_width/5, 100, "Player1")
-draw_text(45, 145, "Press A for Huntress, S for Wizard, D for Archer and W for Worm")
+draw_text(45, 145, "Press A for Knight, S for Wizard, D for Archer and W for Jouster")
 draw_text(room_width/5*3.65, 100, "Player2")
-draw_text(740, 145, "Press J for Huntress, K for Wizard, L for Archer and I for Worm")
+draw_text(740, 145, "Press J for Knight, K for Wizard, L for Archer and I for Jouster")

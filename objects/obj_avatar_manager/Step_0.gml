@@ -3,7 +3,7 @@
 
 if room == rm_avatar_select{
 	if keyboard_check_pressed(ord("A")){
-		player1 = "Huntress"
+		player1 = "Knight"
 		if (!audio_is_playing(snd_select)) {
 			audio_play_sound(snd_select, 1, false);
 		}
@@ -22,13 +22,13 @@ if room == rm_avatar_select{
 		}
 	}
 	else if keyboard_check_pressed(ord("W")){
-		player1 = "Worm"
+		player1 = "Jouster"
 		if (!audio_is_playing(snd_select)) {
 			audio_play_sound(snd_select, 1, false);
 		}
 	}
 	if keyboard_check_pressed(ord("J")){
-		player2 = "Huntress"
+		player2 = "Knight"
 		if (!audio_is_playing(snd_select)) {
 			audio_play_sound(snd_select, 1, false);
 		}
@@ -48,7 +48,7 @@ if room == rm_avatar_select{
 		}
 	}
 	else if keyboard_check_pressed(ord("I")){
-		player2 = "Worm"
+		player2 = "Jouster"
 		if (!audio_is_playing(snd_select)) {
 			audio_play_sound(snd_select, 1, false);
 		}
