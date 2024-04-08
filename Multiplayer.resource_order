@@ -15,7 +15,6 @@
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"dummy_avatars","order":9,"path":"folders/Sprites/dummy_avatars.yy",},
-    {"name":"group1","order":14,"path":"folders/Sprites/group1.yy",},
     {"name":"spr_archer","order":10,"path":"folders/Sprites/spr_archer.yy",},
     {"name":"spr_huntress","order":13,"path":"folders/Sprites/spr_huntress.yy",},
     {"name":"spr_knight","order":12,"path":"folders/Sprites/spr_knight.yy",},
