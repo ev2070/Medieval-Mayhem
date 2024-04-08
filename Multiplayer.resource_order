@@ -128,7 +128,11 @@
     {"name":"spr_worm","order":3,"path":"sprites/spr_worm/spr_worm.yy",},
     {"name":"Sprite75","order":21,"path":"sprites/Sprite75/Sprite75.yy",},
     {"name":"Sprite76","order":22,"path":"sprites/Sprite76/Sprite76.yy",},
+    {"name":"Sprite77","order":23,"path":"sprites/Sprite77/Sprite77.yy",},
+    {"name":"Sprite78","order":24,"path":"sprites/Sprite78/Sprite78.yy",},
     {"name":"Walk","order":4,"path":"sprites/Walk/Walk.yy",},
+    {"name":"TileSet3","order":2,"path":"tilesets/TileSet3/TileSet3.yy",},
+    {"name":"ts_inverted","order":3,"path":"tilesets/ts_inverted/ts_inverted.yy",},
     {"name":"ts_water","order":1,"path":"tilesets/ts_water/ts_water.yy",},
   ],
 }
