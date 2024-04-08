@@ -25,7 +25,12 @@ if (!hit) { //change keys
 
 // Check for player 1's defense move
 if (!defend) {
-	if (keyboard_check(ord("X"))) { block = true; } //change key
+	if (keyboard_check(ord("X"))) { 
+		block = true; 
+		if (!audio_is_playing(snd_block)) {
+			audio_play_sound(snd_block, 1, false);
+		}
+		} //change key
 }
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated

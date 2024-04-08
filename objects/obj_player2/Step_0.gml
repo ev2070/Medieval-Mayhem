@@ -24,7 +24,12 @@ if (!hit) { //change keys
 
 // Check for player 2's defense move
 if (!defend) { //change key
-	if (keyboard_check(ord("M")))      { block = true; } 
+	if (keyboard_check(ord("M")))      { 
+		block = true;
+		if (!audio_is_playing(snd_block)) {
+			audio_play_sound(snd_block, 1, false);
+		}
+		} 
 }
 
 

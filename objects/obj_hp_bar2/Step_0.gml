@@ -10,4 +10,7 @@ event_inherited();
 	current_hp = max_hp
 	global.score_player1 += 1;
 	ScreenShake(7,15)
+	if (!audio_is_playing(snd_death)) {
+			audio_play_sound(snd_death, 1, false);
+		}
 }
