@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_danger_zone",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_battle_ground",
+  "eventList":[],
   "managed":true,
-  "name":"obj_danger_zone",
+  "name":"obj_battle_ground",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_danger_zone",
-    "path":"sprites/spr_danger_zone/spr_danger_zone.yy",
+    "name":"spr_battle_ground",
+    "path":"sprites/spr_battle_ground/spr_battle_ground.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

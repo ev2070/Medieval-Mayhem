@@ -64,8 +64,8 @@ if room == rm_avatar_select{
 
 if room = Room1 {
 	//Set player 1 Sprites
-	if player1 = "Huntress" {
-		obj_hitbox_1.attack_type = "huntress";
+	if player1 = "Knight" {
+		obj_hitbox_1.attack_type = "knight";
 		sprite_index = spr_huntress
 		obj_player1.spd = 4
 		obj_player1.spr_idle = spr_huntress_idle
@@ -79,7 +79,7 @@ if room = Room1 {
 		obj_player1.spr_up_right_atk = spr_huntress_up_right_atk
 		obj_player1.spr_down_right_atk = spr_huntress_down_right_atk
 		obj_player1.spr_right_atk = spr_huntress_right_atk
-		obj_player1.name = "Huntress"
+		obj_player1.name = "Knight"
 		}
 	else if player1 = "Wizard" {
 		obj_hitbox_1.attack_type = "wizard";
@@ -122,8 +122,8 @@ if room = Room1 {
 		obj_player1.name = "Archer"
 		obj_player1.spd = 2.25
 		}
-	else if player1 = "Worm" {
-		obj_hitbox_1.attack_type = "worm";
+	else if player1 = "Jouster" {
+		obj_hitbox_1.attack_type = "jouster";
 		sprite_index = spr_worm
 		
 		obj_player1.spr_idle = spr_knight_idle
@@ -137,14 +137,14 @@ if room = Room1 {
 		obj_player1.spr_up_right_atk = spr_knight_up_right_atk
 		obj_player1.spr_down_right_atk = spr_knight_down_right_atk
 		obj_player1.spr_right_atk = spr_knight_right_atk
-		obj_player1.name = "Worm"
+		obj_player1.name = "Jouster"
 		obj_player1.spd = 4
 	}
 	
 	//set Player 2 Sprites
-	if player2 = "Huntress" {
-		obj_hitbox_2.attack_type = "huntress";
-		obj_player2.name = "Huntress"
+	if player2 = "Knight" {
+		obj_hitbox_2.attack_type = "knight";
+		obj_player2.name = "Knight"
 		sprite_index = spr_huntress
 		
 		obj_player2.spr_idle = spr_huntress_idle
@@ -200,10 +200,10 @@ if room = Room1 {
 		obj_player2.name = "Archer"
 		obj_player2.spd = 2.25
 		}
-	else if player2 = "Worm" {
-		obj_hitbox_2.attack_type = "worm";
+	else if player2 = "Jouster" {
+		obj_hitbox_2.attack_type = "jouster";
 		sprite_index = spr_worm
-		obj_player2.name = "Worm"
+		obj_player2.name = "Jouster"
 		obj_player2.spd = 4
 		obj_player2.spr_idle = spr_knight_idle
 		obj_player2.spr_up = spr_knight_up
