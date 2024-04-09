@@ -4,6 +4,7 @@ event_inherited();
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player1 += 1
+		//obj_hp_bar2.current_hp = obj_hp_bar.max_hp
 	}
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }

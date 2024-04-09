@@ -2,6 +2,7 @@
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player2 += 1
+		//obj_hp_bar1.current_hp = obj_hp_bar.max_hp
 	}
 	
 image_speed = 1
