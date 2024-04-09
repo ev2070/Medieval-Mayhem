@@ -27,7 +27,6 @@ if (!global.paused) {
 
 	if !myPlayer.hit && !myPlayer.stun && myPlayer.charge_att { //attack button pressed
 		
-		image_index = 0
 		myPlayer.attacking = true
 		shot_dir = myPlayer.move_dir
 		//Change attack type for character.
@@ -66,8 +65,8 @@ if (!global.paused) {
 			//myPlayer.hit_timer = myPlayer.hit_duration;
 			canmove = true
 			activated = true
-			x = x + lengthdir_x(50, myPlayer.move_dir);
-			y = y + lengthdir_y(50, myPlayer.move_dir);
+			x = x + lengthdir_x(40, myPlayer.move_dir);
+			y = y + lengthdir_y(40, myPlayer.move_dir);
 		
 			//scale damage by distance between players:
 			damage = distance_to_object(obj_player1) div 20

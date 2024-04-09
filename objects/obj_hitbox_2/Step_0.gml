@@ -109,7 +109,7 @@ if (!global.paused) {
 		image_alpha = 1
 	}
 	else {
-		image_alpha = 0.01
+		image_alpha = 0
 		image_angle = 0
 	}
 }

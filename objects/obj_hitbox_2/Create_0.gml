@@ -3,7 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 myPlayer = obj_player2 //change for other player
-image_alpha = 1 //for testing
+image_alpha = 0 //for testing
 damage = 0
 
 canmove = false;

@@ -162,8 +162,13 @@ if (!global.paused) {
 								 image_xscale = -1; }
 		else if move_dir = 0{ sprite_index = spr_right_atk ; }
 		
-		if image_index > image_number-1 {
+		if spr_up_atk = spr_archer_up_atk {
 			attacking = false
+		}
+		else {
+			if image_index > image_number-1 {
+			attacking = false
+			}
 		}
 	}
 

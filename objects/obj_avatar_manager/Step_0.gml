@@ -184,7 +184,7 @@ if room = Room1 {
 		obj_player1.spr_down_right_atk = spr_knight_down_right_atk
 		obj_player1.spr_right_atk = spr_knight_right_atk
 		obj_player1.name = "Jouster"
-		obj_player1.spd = 4
+		obj_player1.spd = 5
 	}
 	
 	//set Player 2 Sprites
