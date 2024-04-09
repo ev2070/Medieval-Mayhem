@@ -123,6 +123,7 @@ if (charge) {
 	//sprite_index = spr_down_right_atk
 	if (keyboard_check_released(ord("C"))) {
 		charge = false
+		//sound_played = false;
 		
 		if (charge_duration == 60 && audio_is_playing(snd_charge_short1)) {
 			audio_stop_sound(snd_charge_short1);

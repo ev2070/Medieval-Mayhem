@@ -4,7 +4,6 @@ if (!global.paused) {
 	if (timer > 0) {
 	    timer -= 1; // Decrement the timer by 1 each frame
 		if (!audio_is_playing(snd_battle_bgm)) {
-    
 			audio_play_sound(snd_battle_bgm, 1, true);
 		}
 		// Play ticking clock sound when there's only 15s left
