@@ -26,22 +26,16 @@ move_dir = 0; //movement angle
 prev_dir = 0
 
 // for combat
-slap = false;
-trip = false;
-push = false; // rename to shove EDIT
 block = false;
 charge = false;
 charge_att = false;
 
 // for health and damage
 hp = 100;
-slap_damage = 10;
-trip_damage = 20;
-push_damage = 10;
 charge_damage = 25;
 // no block damage
 
-// for slap, trip, push
+// for charge hit
 hit = false;
 hit_duration = 30;
 hit_timer = hit_duration;
