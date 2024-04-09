@@ -14,7 +14,7 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 
 // Check for player 2's combat move
-if (!hit) { //change keys
+if (!hit && !defend) { //change keys
 	if (keyboard_check_pressed(ord("N"))) { //so players won't spam/hold down charge button for entire game 
 		if (keyboard_check(ord("N"))) {
 			charge = true;
@@ -25,12 +25,12 @@ if (!hit) { //change keys
 
 // Check for player 2's defense move
 if (!defend) { //change key
-	if (keyboard_check(ord("M")))      { 
+	if (keyboard_check(ord("M"))) { 
 		block = true;
 		if (!audio_is_playing(snd_block)) {
 			audio_play_sound(snd_block, 1, false);
 		}
-		} 
+	} 
 }
 
 
@@ -138,7 +138,7 @@ if (push_amount >= 0) {
 }
 
 if (charge) {
-	if keyboard_check_released(ord("N")) {
+	if keyboard_check_released(ord("N")) or defend {
 		charge = false
 		
 		if (charge_duration == 60 && audio_is_playing(snd_charge_short2)) {
