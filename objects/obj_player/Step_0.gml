@@ -6,10 +6,9 @@ if (obj_game_manager.pre_game) {
 
 if (!global.paused) {
 	if collision_circle(x,y,1, obj_danger_zone, false, false ){ 
-		obj_hp_bar.current_hp = obj_hp_bar.max_hp
-		fallen = true
-		ScreenShake(7,15)
-	}
+			fallen = true
+			ScreenShake(7,15)
+		}
 
 	if fallen {
 		
@@ -21,6 +20,7 @@ if (!global.paused) {
 			image_yscale = 0.01
 		}
 		fall_timer += 1
+		//fall_timer += 1
 		if fall_timer == fall_timer_max {
 		
 			//audio_play_sound(snd_respawn, 0, false)
@@ -77,6 +77,7 @@ if (!global.paused) {
 			defend = false;
 			defend_timer = defend_duration;
 		}
+		//draw_el
 	}
 	else {image_blend = c_white}
 
@@ -90,6 +91,19 @@ if (!global.paused) {
 		image_blend = c_red //change color if stunned
 	}
 	else {image_blend = c_white}
+
+	// Note: Player might not be able to charge if stunned?
+	//if (charge) {
+	//	charge_timer--
+	//	if charge_timer <= 0 {
+	//		charge = false
+	//		charge_att = true
+	//		charge_timer = 60*2
+	//	}
+	//	else {
+	//		charge_att = false
+	//	}
+	//}
 
 	//change move angle 
 	//and change sprite
@@ -173,6 +187,9 @@ if (!global.paused) {
 	move_left = false
 	move_right = false
 
-	// Reset block boolean
+	// Reset combat booleans
+	slap = false;
+	trip = false;
+	push = false;
 	block = false;
 }

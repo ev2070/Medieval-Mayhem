@@ -10,8 +10,8 @@
   "name":"obj_hitbox_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"hitboxes",
-    "path":"folders/Objects/hitboxes.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

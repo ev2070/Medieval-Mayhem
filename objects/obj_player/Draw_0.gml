@@ -2,6 +2,8 @@
 
 draw_self();
 
+draw_text(50,400, spr_up)
+
 // draw charging bar
 if (charge_width_curr > 0) {
 	draw_set_alpha(0.25);

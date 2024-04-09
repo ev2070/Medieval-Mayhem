@@ -4,7 +4,6 @@ event_inherited();
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player1 += 1
-		//obj_hp_bar2.current_hp = obj_hp_bar.max_hp
 	}
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }
@@ -14,7 +13,7 @@ if (keyboard_check(ord("L"))) { move_right = true; }
 
 
 // Check for player 2's combat move
-if (!hit && !defend) { //change keys
+if (!hit) { //change keys
 	if (keyboard_check_pressed(ord("N"))) { //so players won't spam/hold down charge button for entire game 
 		if (keyboard_check(ord("N"))) {
 			charge = true;
@@ -25,12 +24,12 @@ if (!hit && !defend) { //change keys
 
 // Check for player 2's defense move
 if (!defend) { //change key
-	if (keyboard_check(ord("M"))) { 
+	if (keyboard_check(ord("M")))      { 
 		block = true;
 		if (!audio_is_playing(snd_block)) {
 			audio_play_sound(snd_block, 1, false);
 		}
-	} 
+		} 
 }
 
 
@@ -138,7 +137,7 @@ if (push_amount >= 0) {
 }
 
 if (charge) {
-	if keyboard_check_released(ord("N")) or defend {
+	if keyboard_check_released(ord("N")) {
 		charge = false
 		
 		if (charge_duration == 60 && audio_is_playing(snd_charge_short2)) {
