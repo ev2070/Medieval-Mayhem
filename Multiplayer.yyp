@@ -49,8 +49,8 @@
   "name":"Multiplayer",
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
-    {"id":{"name":"Font3","path":"fonts/Font3/Font3.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
+    {"id":{"name":"Font3","path":"fonts/Font3/Font3.yy",},},
     {"id":{"name":"obj_archer","path":"objects/obj_archer/obj_archer.yy",},},
     {"id":{"name":"obj_arena","path":"objects/obj_arena/obj_arena.yy",},},
     {"id":{"name":"obj_avatar_choice","path":"objects/obj_avatar_choice/obj_avatar_choice.yy",},},
@@ -72,6 +72,8 @@
     {"id":{"name":"obj_screenshake","path":"objects/obj_screenshake/obj_screenshake.yy",},},
     {"id":{"name":"obj_select1","path":"objects/obj_select1/obj_select1.yy",},},
     {"id":{"name":"obj_select2","path":"objects/obj_select2/obj_select2.yy",},},
+    {"id":{"name":"obj_selection1","path":"objects/obj_selection1/obj_selection1.yy",},},
+    {"id":{"name":"obj_selection2","path":"objects/obj_selection2/obj_selection2.yy",},},
     {"id":{"name":"obj_text","path":"objects/obj_text/obj_text.yy",},},
     {"id":{"name":"obj_timer","path":"objects/obj_timer/obj_timer.yy",},},
     {"id":{"name":"obj_wizard","path":"objects/obj_wizard/obj_wizard.yy",},},
