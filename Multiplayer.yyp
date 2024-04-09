@@ -38,7 +38,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Ancient Medium.ttf","CopyToMask":-1,"filePath":"datafiles","name":"Ancient Medium.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -46,6 +48,9 @@
   },
   "name":"Multiplayer",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"Font3","path":"fonts/Font3/Font3.yy",},},
+    {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
     {"id":{"name":"obj_archer","path":"objects/obj_archer/obj_archer.yy",},},
     {"id":{"name":"obj_arena","path":"objects/obj_arena/obj_arena.yy",},},
     {"id":{"name":"obj_avatar_choice","path":"objects/obj_avatar_choice/obj_avatar_choice.yy",},},

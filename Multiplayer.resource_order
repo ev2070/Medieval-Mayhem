@@ -29,6 +29,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Font3","order":2,"path":"fonts/Font3/Font3.yy",},
+    {"name":"Font2","order":1,"path":"fonts/Font2/Font2.yy",},
     {"name":"obj_arena","order":28,"path":"objects/obj_arena/obj_arena.yy",},
     {"name":"obj_avatar_choice","order":14,"path":"objects/obj_avatar_choice/obj_avatar_choice.yy",},
     {"name":"obj_avatar_manager","order":15,"path":"objects/obj_avatar_manager/obj_avatar_manager.yy",},

@@ -1,4 +1,5 @@
 // obj_game_manager draw
+draw_set_font(Font1);
 
 // Display a growing FIGHT
 if (room == Room1 && pre_game) {
