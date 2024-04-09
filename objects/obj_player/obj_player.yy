@@ -10,8 +10,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"players",
+    "path":"folders/Objects/players.yy",
   },
   "parentObjectId":null,
   "persistent":false,

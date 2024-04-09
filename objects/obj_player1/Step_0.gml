@@ -2,6 +2,7 @@
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player2 += 1
+		//obj_hp_bar1.current_hp = obj_hp_bar.max_hp
 	}
 	
 image_speed = 1
@@ -13,7 +14,7 @@ if (keyboard_check(ord("S"))) { move_down  = true; }
 if (keyboard_check(ord("D"))) { move_right = true; }
 
 // Check for player 1's combat move
-if (!hit) { //change keys
+if (!hit && !defend) { //change keys
 	if (keyboard_check_pressed(ord("C"))) { //so players won't spam/hold down charge button for entire game 
 		if (keyboard_check(ord("C"))) {
 			charge = true;
@@ -121,7 +122,7 @@ if (push_amount >= 0) {
 
 if (charge) {
 	//sprite_index = spr_down_right_atk
-	if (keyboard_check_released(ord("C"))) {
+	if (keyboard_check_released(ord("C"))) or defend {
 		charge = false
 		
 		if (charge_duration == 60 && audio_is_playing(snd_charge_short1)) {

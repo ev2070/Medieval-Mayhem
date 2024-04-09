@@ -34,7 +34,7 @@ if (!global.paused) {
 		myPlayer.hit = true;
 		myPlayer.hit_timer = myPlayer.hit_duration;
 		hitbox_timer += 1
-			if attack_type = "huntress" { //Long hitbox
+			if attack_type = "knight" { //Long hitbox
 				//change hitbox angle according to Move_Dir
 				if myPlayer.move_dir % 90 == 0 { image_xscale *= 3;} //moving non-diagonal
 				else { image_yscale *= 3; }
@@ -100,7 +100,7 @@ if (!global.paused) {
 	if myPlayer.attacking { //change sprite 
 		//seelect based on atk type
 		if player2 = "Wizard" { sprite_index = spr_ATK2; }
-		else if player2 = "Huntress" or player2 = "Worm" {
+		else if player2 = "Knight" or player2 = "Jouster" {
 			sprite_index = spr_ATK1;
 		}
 		image_alpha = 1
