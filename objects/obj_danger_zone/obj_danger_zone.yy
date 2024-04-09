@@ -34,5 +34,5 @@
     "path":"sprites/spr_danger_zone/spr_danger_zone.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

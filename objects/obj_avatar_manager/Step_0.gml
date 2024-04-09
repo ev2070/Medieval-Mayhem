@@ -48,7 +48,7 @@ if room == rm_avatar_select{
 			audio_play_sound(snd_select, 1, false);
 		}
 	}
-	else if obj_select1.x == 1182 + 10{
+	else if obj_select2.x == 1182 + 10{
 		player2 = "Jouster"
 		if (!audio_is_playing(snd_select)) {
 			audio_play_sound(snd_select, 1, false);

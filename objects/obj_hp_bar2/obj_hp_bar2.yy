@@ -10,8 +10,8 @@
   "name":"obj_hp_bar2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"hp bars",
+    "path":"folders/Objects/hp bars.yy",
   },
   "parentObjectId":{
     "name":"obj_hp_bar",
