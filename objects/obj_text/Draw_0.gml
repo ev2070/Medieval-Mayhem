@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_set_color(c_yellow)
+draw_set_color(c_black)
 draw_text(room_width/2 - 200, room_height/2 + 200, "Choose an avatar, press enter when done")
 
 draw_text(144, 495, "Archer")
