@@ -4,7 +4,7 @@
 
 if (!global.paused) {
 	if (timer == 3600) {
-		timer_color = c_navy;
+		timer_color = c_lime;
 	}
 	
 	if (timer > 0) {
