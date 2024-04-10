@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.905805,
+  "duration":0.182653,
   "name":"snd_select",
   "parent":{
     "name":"Sounds",

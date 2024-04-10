@@ -5,54 +5,38 @@ if room == rm_avatar_select{
 	if obj_select1.x == 191{
 	//if keyboard_check_pressed(ord("A")){
 		player1 = "Archer"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 	}
 	else if obj_select1.x == 513{
 		player1 = "Knight"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 		
 	}
 	else if obj_select1.x == 832{
 		player1 = "Wizard"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 	}
 	else if obj_select1.x == 1182{
 		player1 = "Jouster"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 	}
 	if obj_select2.x == 191 + 10{
 		player2 = "Archer"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 		
 	}
 	else if obj_select2.x == 513 + 10{
 		player2 = "Knight"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 		
 	}
 	else if obj_select2.x == 832 + 10{
 		player2 = "Wizard"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 	}
 	else if obj_select2.x == 1182 + 10{
 		player2 = "Jouster"
-		if (!audio_is_playing(snd_select)) {
-			audio_play_sound(snd_select, 1, false);
-		}
+		
 	}
 	if keyboard_check_pressed(vk_enter) and player1 != 0 and player2 != 0 {
 		room_goto(rm_avatars)
