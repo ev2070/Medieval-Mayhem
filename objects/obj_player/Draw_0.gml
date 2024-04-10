@@ -2,6 +2,10 @@
 
 draw_self();
 
+// display combat move
+if (charge)  { draw_text(x-string_width("charging")/2, y-sprite_height/3*2, "charging"); }
+else if (defend) { draw_text(x-string_width("block")/2, y-sprite_height/3*2, "block"); }
+
 // draw charging bar
 if (charge_width_curr > 0) {
 	draw_set_alpha(0.5);
