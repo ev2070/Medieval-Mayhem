@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 if (!global.paused) {
 	if (timer > 0) {
 	    timer -= 1; // Decrement the timer by 1 each frame
@@ -14,6 +16,9 @@ if (!global.paused) {
 	
 	if (timer <= 0) {
 		audio_stop_sound(snd_battle_bgm);
+		if (!audio_is_playing(snd_end)) {
+			audio_play_sound(snd_end, 1, false);
+		}
 	    if (global.score_player1 > global.score_player2) {
 	        global.winner = "Player 1 Wins!";
 	    } else if (global.score_player2 > global.score_player1) {
