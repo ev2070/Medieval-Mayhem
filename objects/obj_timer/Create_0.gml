@@ -3,3 +3,4 @@
 timer = 3600;
 frames_elapsed = 0;
 global.winner = "";
+timer_color = c_navy;

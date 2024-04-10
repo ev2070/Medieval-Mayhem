@@ -3,6 +3,10 @@
 
 
 if (!global.paused) {
+	if (timer == 3600) {
+		timer_color = c_navy;
+	}
+	
 	if (timer > 0) {
 	    timer -= 1; // Decrement the timer by 1 each frame
 		if (!audio_is_playing(snd_battle_bgm)) {
@@ -11,6 +15,7 @@ if (!global.paused) {
 		// Play ticking clock sound when there's only 15s left
 		if (timer < 16*60 && timer > 60 && frames_elapsed % 60 == 0) {
             audio_play_sound(snd_tick, 1, false);
+			timer_color = #FF0A47;
         }
 	}
 	
