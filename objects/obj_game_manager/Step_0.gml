@@ -1,5 +1,6 @@
 // obj_game_manager step
 
+
 global.paused = (pre_game || post_game || obj_endScreen.visible); // can add more booleans here
 
 if (pre_game) {
