@@ -6,6 +6,7 @@ if (obj_game_manager.pre_game) {
 
 if (!global.paused) {
 	if collision_circle(x,y,1, obj_danger_zone, false, false ){ 
+		//obj_hp_bar.current_hp = obj_hp_bar.max_hp
 		fallen = true
 		ScreenShake(7,15)
 	}
@@ -159,7 +160,7 @@ if (!global.paused) {
 
 		else if move_dir = 180 { sprite_index = spr_right_atk; 
 								 image_xscale = -1; }
-		else if move_dir = 0{ sprite_index = spr_right_atk ; }
+		else if move_dir = 0 { sprite_index = spr_right_atk ; }
 		
 		if image_index > image_number-1 {
 			attacking = false

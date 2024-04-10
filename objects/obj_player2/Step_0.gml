@@ -4,6 +4,7 @@ event_inherited();
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player1 += 1
+		obj_hp_bar2.current_hp = obj_hp_bar2.max_hp
 	}
 // Check for player 2's movement
 if (keyboard_check(ord("I"))) { move_up    = true; }
@@ -39,8 +40,8 @@ if (point_distance(x, y, obj_player1.x, obj_player1.y) <= 128 &&
 	*/
 	
 //if player collides with an active hitbox - 
-if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
-	&& obj_hp_bar2.current_hp > 0){
+if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated) 
+	&& obj_hp_bar2.current_hp > 0 {
 		prev_dir = move_dir
 		
 		if !obj_player2.defend { //if NOT defending, take damage and be stunned
@@ -53,6 +54,26 @@ if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 			}
 			
 		}
+		
+			if obj_player2.defend {
+			prev_dir = obj_player1.move_dir
+			obj_player1.move_dir = (obj_player1.move_dir + 180) % 360
+			obj_player1.push_amount = regular_push_amount
+			//short stun
+			obj_player1.stun = true
+			obj_player1.stun = stun_duration * 0.75
+			
+			//enemy takes a bit of damage
+			var absorb_damage = obj_hitbox_1.damage div 2
+			obj_hp_bar1.current_hp -= absorb_damage
+			var a_damage_indicator = instance_create_depth(obj_player1.x+5,obj_player1.y-sprite_height,-1,obj_damage_indicator);
+			a_damage_indicator.damage = absorb_damage
+			//this player heals that same damage.
+			obj_hp_bar2.current_hp += absorb_damage
+			ScreenShake(4,15)
+		}
+		
+		
 		//always get pushed by attacks - 
 		push_amount = regular_push_amount;
 		if (charge_att){
@@ -62,43 +83,7 @@ if (collision_circle(x,y,32, obj_hitbox_1,true,false) && obj_hitbox_1.activated
 		move_dir = obj_player1.move_dir
 		}
 		
-		//move_dir = prev_dir
 		
-		
-		
-		
-		/*
-		//player still is pushed by an attack but doesn't take damage:
-		if obj_player2.defend {
-			obj_player2.stun = true;
-			obj_player2.stun_timer = stun_duration;
-			push_amount = regular_push_amount;
-			if (charge_att){
-				push_amount = large_push_amount;
-			}
-			//knocked back by direction of the enemys attack ? 
-			move_dir = obj_player1.move_dir
-		}
-		else {
-		
-		//hit = true;
-		//hit_timer = hit_duration;
-		
-		if (player1 != "Archer") { // Archer damage logic in hitboxes
-			obj_hp_bar2.current_hp -= obj_hitbox_1.damage
-			var a_damage_indicator = instance_create_depth(x+5,y-sprite_height,-1,obj_damage_indicator);
-			a_damage_indicator.damage = obj_hitbox_1.damage;
-		}
-		
-		push_amount = regular_push_amount;
-		if (charge_att){
-			push_amount = large_push_amount;
-		}
-		//knocked back by direction of the enemys attack ? 
-		move_dir = obj_player1.move_dir
-		}*/
-		
-	//}
 
 if (push_amount >= 0) {
 	var new_x = x;

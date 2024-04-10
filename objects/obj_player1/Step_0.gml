@@ -2,6 +2,7 @@
 
 if collision_circle(x,y,1, obj_danger_zone, false, false ) and fall_timer = 1 { 
 		global.score_player2 += 1
+		obj_hp_bar1.current_hp = obj_hp_bar1.max_hp
 	}
 	
 image_speed = 1
@@ -35,7 +36,6 @@ if (!defend) {
 //if player collides with an active hitbox - 
 if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
 	&& obj_hp_bar1.current_hp > 0) {
-		prev_dir = move_dir
 	
 		if !obj_player1.defend { //if NOT defending, take damage and be stunned
 			obj_player1.stun = true;
@@ -47,6 +47,27 @@ if (collision_circle(x,y,32, obj_hitbox_2,true,false) && obj_hitbox_2.activated
 			}
 			
 		}
+		
+		//if blocking, knock back and slight damage/stun the attacker.
+		if obj_player1.defend {
+			prev_dir = obj_player2.move_dir
+			obj_player2.move_dir = (obj_player2.move_dir + 180) % 360
+			obj_player2.push_amount = regular_push_amount
+			//short stun
+			obj_player2.stun = true
+			obj_player2.stun = stun_duration * 0.75
+			
+			//enemy takes a bit of damage
+			var absorb_damage = obj_hitbox_2.damage div 2
+			obj_hp_bar2.current_hp -= absorb_damage
+			var a_damage_indicator = instance_create_depth(obj_player2.x+5,obj_player2.y-sprite_height,-1,obj_damage_indicator);
+			a_damage_indicator.damage = absorb_damage
+			//this player heals that same damage.
+			obj_hp_bar1.current_hp += absorb_damage
+			ScreenShake(4,15)
+			
+		}
+		
 		//always get pushed by attacks - 
 		push_amount = regular_push_amount;
 		if (charge_att){
