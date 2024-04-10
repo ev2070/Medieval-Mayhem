@@ -9,3 +9,4 @@ if room == rm_avatars{
 		}
 	}
 }
+
